@@ -13,4 +13,7 @@ These features are able to communicate and interact with each other. For example
 
 # How to Install
 
+# User Personas, Vision Statement and Idea Board
+https://docs.google.com/document/d/1y7izQUvN6UzQYRuw_cb_xHtADV20pzqIIkr6MgNdVRU/edit?usp=sharing
+
 
