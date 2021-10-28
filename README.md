@@ -1,7 +1,7 @@
 # The Completionist
 ## TJ Nguyen, Tuan Lam, Adam Lang, Andrew Pari, Sameera Rachakonda, Matt Stasiak 
 
-The Completionist is a desktop application coded primarily in Java that is designed to help increase productivity for students and professionals. 
+The Completionist is a desktop application coded primarily in Java with a command-line user interface that is designed to help increase productivity for students and professionals. 
 
 The key features of this software include:
 1. To-Do List
