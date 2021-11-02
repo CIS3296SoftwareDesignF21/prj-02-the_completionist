@@ -1,14 +1,15 @@
 import java.util.Calendar;
 
-public class task {
+public class Task {
     private String name;
     private String date;
     private int priority;
     private String flag;
+    private int index;
 
-    public task(){ }
+    public Task(){ }
 
-    public task(String name, String date, int priority, String flag){
+    public Task(String name, String date, int priority, String flag){
         this.name = name;
         this.date = date;
         this.priority = priority;
@@ -45,5 +46,13 @@ public class task {
 
     public void setFlag(String flag) {
         this.flag = flag;
+    }
+
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
     }
 }
