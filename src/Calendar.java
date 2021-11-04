@@ -19,6 +19,9 @@ public class Calendar {
     }
 
     public int addTask(){
+
+        String month;
+        int date;
     
         Scanner myScanner = new Scanner(System.in);
 
@@ -30,12 +33,87 @@ public class Calendar {
 
         System.out.println("Enter priority: ");
         String priority = myScanner.nextLine();
+
+        System.out.println("Enter Flag (true/false): ");
+        String flag = myScanner.nextLine();
         
-        writeToFile(taskName, dueDate, priority);
+        writeToFile(taskName, dueDate, priority, flag);
+        saveToArray(taskName, dueDate, priority, flag);
 
         myScanner.close();
 
         return 1;
+    }
+
+    private void saveToArray(String taskName, String dueDate, String priority, String flag){
+
+        String month = monthFinder(dueDate);
+        int date = dateFinder(dueDate);
+
+        if(month.equals("jan")){
+            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
+            jan[date] = newTask;
+    
+        }
+        else if(month.equals("feb")){
+            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
+            feb[date] = newTask;
+    
+        }
+        else if(month.equals("mar")){
+            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
+            mar[date] = newTask;
+    
+        }
+        else if(month.equals("april")){
+            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
+            april[date] = newTask;
+        }
+        else if(month.equals("may")){
+            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
+            may[date] = newTask;
+    
+        }
+        else if(month.equals("june")){
+            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
+            june[date] = newTask;
+    
+        }
+        else if(month.equals("jul")){
+            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
+            jul[date] = newTask;
+    
+        }
+        else if(month.equals("aug")){
+            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
+            aug[date] = newTask;
+    
+        }
+        else if(month.equals("sept")){
+            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
+            sept[date] = newTask;
+    
+        }
+        else if(month.equals("oct")){
+            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
+            oct[date] = newTask;
+    
+        }
+        else if(month.equals("nov")){
+            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
+            nov[date] = newTask;
+    
+        }
+        else if(month.equals("dec")){
+            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
+            dec[date] = newTask;
+    
+        }
+    }
+
+    private int dateFinder(String input){
+        String[] parsedString = input.split("/");
+        return Integer.parseInt(parsedString[1]);
     }
 
     //finds what month the user enter to pull up the right month text file.
@@ -50,7 +128,7 @@ public class Calendar {
     }
 
     //saves the task to correct month text file.
-    private void writeToFile(String taskName, String dueDate, String priority){
+    private void writeToFile(String taskName, String dueDate, String priority, String flag){
 
         String month = monthFinder(dueDate);
 
@@ -59,6 +137,7 @@ public class Calendar {
             myWriter.write("{\nName: " + taskName + "\n");
             myWriter.write("Date: " + dueDate + "\n");
             myWriter.write("Priority: " + priority + "\n");
+            myWriter.write("Flag: " + flag + "\n");
             myWriter.write("}");
             myWriter.close();
 
@@ -66,7 +145,6 @@ public class Calendar {
             System.out.println("Error writing to file");
             e.printStackTrace();
         }
-
 
     }
 
@@ -79,7 +157,6 @@ public class Calendar {
                 String line = myScanner.nextLine();
             }
         } catch (FileNotFoundException e) {
-            //TODO: handle exception
             System.out.println("Error");
             e.printStackTrace();
         }
