@@ -2,25 +2,25 @@ import java.io.*;
 import java.util.*;
 
 public class Calendar {
-    private Task[] jan, feb, mar, april, may, june, jul, aug, sept, oct, nov, dec;
-    private LinkedList[] test = new LinkedList[30];
+    private LinkedList[] jan, feb, mar, april, may, june, jul, aug, sept, oct, nov, dec;
 
     public Calendar(){
-        jan = new Task[31];
-        feb = new Task[28];
-        mar = new Task[31];
-        may = new Task[31];
-        jul = new Task[31];
-        aug = new Task[31];
-        oct = new Task[31];
-        dec = new Task[31];
-        april = new Task[30];
-        june = new Task[30];
-        nov = new Task[30]; 
+        jan = new LinkedList[31];
+        feb = new LinkedList[28];
+        mar = new LinkedList[31];
+        may = new LinkedList[31];
+        jul = new LinkedList[31];
+        aug = new LinkedList[31];
+        oct = new LinkedList[31];
+        dec = new LinkedList[31];
+        april = new LinkedList[30];
+        june = new LinkedList[30];
+        nov = new LinkedList[30]; 
     }
 
     public int addTask(){
 
+        
         String month;
         int date;
     
@@ -39,13 +39,15 @@ public class Calendar {
         String flag = myScanner.nextLine();
         
         writeToFile(taskName, dueDate, priority, flag);
-        saveToArray(taskName, dueDate, priority, flag);
+        //saveToArray(taskName, dueDate, priority, flag);
+        //test[1].add( new Task(taskName, dueDate, Integer.parseInt(priority), flag));
+       
 
         myScanner.close();
 
         return 1;
     }
-
+    /*
     private void saveToArray(String taskName, String dueDate, String priority, String flag){
 
         String month = monthFinder(dueDate);
@@ -54,6 +56,7 @@ public class Calendar {
         if(month.equals("jan")){
             Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
             jan[date] = newTask;
+            
         }
         else if(month.equals("feb")){
             Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
@@ -110,6 +113,7 @@ public class Calendar {
     
         }
     }
+    */
 
     private int dateFinder(String input){
         String[] parsedString = input.split("/");
@@ -184,7 +188,8 @@ public class Calendar {
 
                 }
             }
-            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
+            int date = dateFinder(dueDate);
+            jan[date].add( new Task(taskName, dueDate, Integer.parseInt(priority), flag));
         }
         catch (FileNotFoundException e) {
             System.out.println("Error");
