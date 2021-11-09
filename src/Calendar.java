@@ -2,25 +2,24 @@ import java.io.*;
 import java.util.*;
 
 public class Calendar {
-    private LinkedList[] jan, feb, mar, april, may, june, jul, aug, sept, oct, nov, dec;
+    private ArrayList[] jan, feb, mar, april, may, june, jul, aug, sept, oct, nov, dec;
 
     public Calendar(){
-        jan = new LinkedList[31];
-        feb = new LinkedList[28];
-        mar = new LinkedList[31];
-        may = new LinkedList[31];
-        jul = new LinkedList[31];
-        aug = new LinkedList[31];
-        oct = new LinkedList[31];
-        dec = new LinkedList[31];
-        april = new LinkedList[30];
-        june = new LinkedList[30];
-        nov = new LinkedList[30]; 
+        jan = new ArrayList[31];
+        feb = new ArrayList[28];
+        mar = new ArrayList[31];
+        may = new ArrayList[31];
+        jul = new ArrayList[31];
+        aug = new ArrayList[31];
+        oct = new ArrayList[31];
+        dec = new ArrayList[31];
+        april = new ArrayList[30];
+        june = new ArrayList[30];
+        nov = new ArrayList[30]; 
     }
 
     public int addTask(){
 
-        
         String month;
         int date;
     
@@ -189,7 +188,7 @@ public class Calendar {
                 }
             }
             int date = dateFinder(dueDate);
-            jan[date].add( new Task(taskName, dueDate, Integer.parseInt(priority), flag));
+            //jan[date].add( new Task(taskName, dueDate, Integer.parseInt(priority), flag));
         }
         catch (FileNotFoundException e) {
             System.out.println("Error");
