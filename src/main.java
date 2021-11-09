@@ -1,10 +1,10 @@
+import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
-        System.out.println("Hello world, from TJ.");
-        System.out.println("Hello world, from Sameera.");
-        System.out.println("Hello TJ, this is Tuan");
-        System.out.println("Hello world, from Adam.");
-	    System.out.println("hello world from andrew");
-        System.out.println("Hey Tuan. Saying hello from my own branch.");
+        to_do_list toDoList = new to_do_list();
+        toDoList.add_task( new Task("do Homework", "11/9/21", 1, "true"));
+        toDoList.add_task( new Task("workout", "11/9/21", 3, "true"));
+        toDoList.add_task( new Task("meet with project group", "11/9/21", 2, "true"));
+        toDoList.print();
     }
 }
