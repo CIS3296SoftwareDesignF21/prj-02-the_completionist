@@ -6,6 +6,5 @@ public class main {
         toDoList.add_task( new Task("workout", "11/9/21", 3, "true"));
         toDoList.add_task( new Task("meet with project group", "11/9/21", 2, "true"));
         toDoList.print();
-
     }
 }
