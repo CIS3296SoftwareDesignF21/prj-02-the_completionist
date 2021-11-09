@@ -27,5 +27,7 @@ https://docs.google.com/document/d/1gTEzMWscNSvW-PFdMYA6CQFRUvlqC2HmPmQjqyizfhc/
 https://drive.google.com/file/d/1ZA55OEslf93hhpxhqoJ5u4RYq3rrBt0C/view?usp=sharing
 
 # Week2.md
+Week 2 UML Diagram
+![completionist_uml drawio](https://user-images.githubusercontent.com/77748463/140963703-975170be-a4ce-4b34-8212-f9a6a77cdc53.png)
 
 
