@@ -134,10 +134,24 @@ public class Calendar {
     private void writeToFile(String taskName, String dueDate, String priority, String flag){
 
         String month = monthFinder(dueDate);
+        int date = dateFinder(dueDate);
 
         try {
             FileWriter myWriter = new FileWriter( month + ".txt", true);
-            myWriter.write("{\nName: " + taskName + "\n");
+//            for (int i = 1; i < 31; i++) {
+//                if (date != i) {
+//                    myWriter.write(i + " :\n");
+//                } else {
+//                    myWriter.write(i + " :\n");
+//                    myWriter.write("{\nName: " + taskName + "\n");
+//                    myWriter.write("Priority: " + priority + "\n");
+//                    myWriter.write("Flag: " + flag + "\n");
+//                    myWriter.write("}\n");
+//                }
+//            }
+//            myWriter.close();
+
+            myWriter.write("\n{\nName: " + taskName + "\n");
             myWriter.write("Date: " + dueDate + "\n");
             myWriter.write("Priority: " + priority + "\n");
             myWriter.write("Flag: " + flag + "\n");
@@ -157,7 +171,7 @@ public class Calendar {
         dueDate = priority = flag = null;
 
         try {
-            File fileObj = new File("jan.txt");
+            File fileObj = new File("nov.txt");
             Scanner myScanner = new Scanner(fileObj);
 
             while(myScanner.hasNextLine()){
@@ -180,7 +194,7 @@ public class Calendar {
                         priority = stringArr[1];
                         continue;
                     }
-                    else{
+                    else {
                         flag = stringArr[1];
                         continue;
                     }
@@ -266,6 +280,14 @@ public class Calendar {
                 return "error";
         }
             
+    }
+
+    public void printCalendar() throws FileNotFoundException {
+        Scanner input = new Scanner(new File("nov.txt"));
+
+        while (input.hasNextLine()) {
+            System.out.println(input.nextLine());
+        }
     }
     
 }
