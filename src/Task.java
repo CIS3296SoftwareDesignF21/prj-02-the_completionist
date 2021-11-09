@@ -55,4 +55,8 @@ public class Task {
     public void setIndex(int index) {
         this.index = index;
     }
+
+    public String toString(){
+        return "Task Name: " + name + "\nTask Date: " + date + "\nTask Priority: " + priority;
+    }
 }
