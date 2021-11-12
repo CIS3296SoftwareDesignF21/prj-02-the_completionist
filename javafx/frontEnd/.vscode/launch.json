@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch main",
+            "request": "launch",
+            "mainClass": "main",
+            "projectName": "prj-02-the_completionist_c3119410"
+        },
+        {
+            "type": "java",
+            "name": "Launch addTaskFrame",
+            "request": "launch",
+            "mainClass": "addTaskFrame",
+            "projectName": "prj-02-the_completionist_c3119410"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
