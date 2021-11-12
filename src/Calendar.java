@@ -106,22 +106,18 @@ public class Calendar {
                     String[] stringArr = line.split(":");
 
                     if(stringArr[0].equals("Name")){
-                        System.out.println(stringArr[1]);
                         taskName = stringArr[1];
                         continue;
                     }
                     else if(stringArr[0].equals("Date")){
-                        System.out.println(stringArr[1]);
                         dueDate = stringArr[1];
                         continue;
                     }
                     else if(stringArr[0].equals("Priority")){
-                        System.out.println(stringArr[1]);
                         priority = stringArr[1];
                         continue;
                     }
                     else {
-                        System.out.println(stringArr[1]);
                         flag = stringArr[1];
                         continue;
                     }
