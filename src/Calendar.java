@@ -18,30 +18,10 @@ public class Calendar {
         nov = new ArrayList[30]; 
     }
 
-    public int addTask(){
-
-        String month;
-        int date;
-    
-        Scanner myScanner = new Scanner(System.in);
-
-        System.out.println("Enter task name: ");
-        String taskName =  myScanner.nextLine();
-
-        System.out.println("Enter due date (MM/DD/YYYY): ");
-        String dueDate = myScanner.nextLine();
-
-        System.out.println("Enter priority: ");
-        String priority = myScanner.nextLine();
-
-        System.out.println("Enter Flag (true/false): ");
-        String flag = myScanner.nextLine();
+    public int addTask(String taskName, String dueDate, String priority){
+                
+        writeToFile(taskName, dueDate, priority, "True");
         
-        writeToFile(taskName, dueDate, priority, flag);
-        //test[1].add( new Task(taskName, dueDate, Integer.parseInt(priority), flag));
-       
-        myScanner.close();
-
         return 1;
     }
  

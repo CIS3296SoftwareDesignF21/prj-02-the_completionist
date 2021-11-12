@@ -11,7 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
- 
+
 public class addTaskFrame extends Application {
     
     @Override
@@ -50,8 +50,11 @@ public class addTaskFrame extends Application {
  
         @Override
              public void handle(ActionEvent event) {
-                //add code to save task in both to-do and calendar.
-                 System.out.println("Task Added");
+                
+                Calendar newCal = new Calendar();
+                newCal.addTask(taskName.getText(), date.getEditor().getText(), priorityField.getText());
+                
+                System.out.println("Task Added");
              }
         });
         
