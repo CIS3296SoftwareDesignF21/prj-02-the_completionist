@@ -44,6 +44,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -97,15 +98,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes" />
     <option name="LAST_COMMIT_MESSAGE" value="Changes" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="328" y="103" key="#Project_Structure" timestamp="1636481653379">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="328" y="103" key="#Project_Structure/0.0.1680.1050@0.0.1680.1050" timestamp="1636481653379" />
-    <state x="440" y="243" key="Vcs.Push.Dialog.v2" timestamp="1636482845535">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="440" y="243" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1636482845535" />
   </component>
 </project>
