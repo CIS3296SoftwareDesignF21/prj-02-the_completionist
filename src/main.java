@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 import java.util.*;
 import javax.swing.*;
 import java.awt.*;
@@ -21,8 +22,19 @@ public class main
     
     static JButton buttonDays[] = new JButton[42];
     
-    public static void main(String args[])
+    public static void main(String args[]) throws FileNotFoundException
     {
+        Calendar cal2 = new Calendar();
+        cal2.addTask();
+        cal2.printCalendar();
+        
+        to_do_list toDoList = new to_do_list();
+        toDoList.add_task( new Task("do Homework", "11/9/21", 1, "true"));
+        toDoList.add_task( new Task("workout", "11/9/21", 3, "true"));
+        toDoList.add_task( new Task("meet with project group", "11/9/21", 2, "true"));
+        toDoList.print();
+        
+        
         //prep frame
         frameMain = new JFrame("The Completionist");
         frameMain.setSize(750, 750);
