@@ -2,26 +2,67 @@ import java.io.*;
 import java.util.*;
 
 public class Calendar {
-    private ArrayList[] jan, feb, mar, april, may, june, jul, aug, sept, oct, nov, dec;
+    private List<List<Task>> jan, feb, mar, april, may, june, jul, aug, sept, oct, nov, dec;
 
     public Calendar(){
-        jan = new ArrayList[31];
-        feb = new ArrayList[28];
-        mar = new ArrayList[31];
-        may = new ArrayList[31];
-        jul = new ArrayList[31];
-        aug = new ArrayList[31];
-        oct = new ArrayList[31];
-        dec = new ArrayList[31];
-        april = new ArrayList[30];
-        june = new ArrayList[30];
-        nov = new ArrayList[30]; 
+        jan = new ArrayList<List<Task>>(30);
+        feb = new ArrayList<List<Task>>(29);
+        mar = new ArrayList<List<Task>>(31);
+        april = new ArrayList<List<Task>>(30);
+        may = new ArrayList<List<Task>>(31);
+        june = new ArrayList<List<Task>>(30);
+        jul = new ArrayList<List<Task>>(31);
+        aug = new ArrayList<List<Task>>(31);
+        sept = new ArrayList<List<Task>>(30);
+        oct = new ArrayList<List<Task>>(31);
+        nov = new ArrayList<List<Task>>(30);
+        dec = new ArrayList<List<Task>>(31); 
     }
 
-    public int addTask(String taskName, String dueDate, String priority){
-                
-        writeToFile(taskName, dueDate, priority, "True");
-        
+    public int addTask(Task newTask){
+
+        String month = monthFinder(newTask.getDate());
+        int date = dateFinder(newTask.getDate());
+
+        if(month.equals("jan")){
+            jan.get(date).add(newTask);
+        }
+        else if(month.equals("feb")){
+            feb.get(date).add(newTask);
+        }
+        else if(month.equals("mar")){
+            mar.get(date).add(newTask);
+        }
+        else if(month.equals("april")){
+            april.get(date).add(newTask);
+        }
+        else if(month.equals("may")){
+            may.get(date).add(newTask);
+        }
+        else if(month.equals("june")){
+            june.get(date).add(newTask);
+        }
+        else if(month.equals("jul")){
+            jul.get(date).add(newTask);
+        }
+        else if(month.equals("aug")){
+            aug.get(date).add(newTask);
+        }
+        else if(month.equals("sept")){
+            sept.get(date).add(newTask);
+        }
+        else if(month.equals("oct")){
+            oct.get(date).add(newTask);
+        }
+        else if(month.equals("nov")){
+            nov.get(date).add(newTask);
+        }
+        else if(month.equals("dec")){
+            dec.get(date).add(newTask);
+        }
+        else{
+            return -1;
+        }
         return 1;
     }
  
@@ -112,44 +153,6 @@ public class Calendar {
             System.out.println("Error");
             e.printStackTrace();
         }
-      /*
-        try {
-            File fileObj = new File("feb.txt");
-            Scanner myScanner = new Scanner(fileObj);
-
-            while(myScanner.hasNextLine()){
-                
-                String line = myScanner.nextLine();
-                if(line.equals("{\n") || line.equals("}\n")){
-                    continue;
-                }
-                else{
-                    String[] stringArr = line.split(":");
-                    if(stringArr[0].equals("Name")){
-                        taskName = stringArr[1];
-                        continue;
-                    }
-                    else if(stringArr[0].equals("Date")){
-                        dueDate = stringArr[1];
-                        continue;
-                    }
-                    else if(stringArr[0].equals("Priority")){
-                        priority = stringArr[1];
-                        continue;
-                    }
-                    else{
-                        flag = stringArr[1];
-                        continue;
-                    }
-
-                }
-            }
-        }
-        catch (FileNotFoundException e) {
-            System.out.println("Error");
-            e.printStackTrace();
-        }
-        */
     }
     
     //This will convert the numerical form the month to word form of the month, to find the correct file.

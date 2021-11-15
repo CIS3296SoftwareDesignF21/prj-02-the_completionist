@@ -51,10 +51,16 @@ public class addTaskFrame extends Application {
         @Override
              public void handle(ActionEvent event) {
                 
-                Calendar newCal = new Calendar();
-                newCal.addTask(taskName.getText(), date.getEditor().getText(), priorityField.getText());
+                Task newTask = new Task(taskNameField.getText(), date.getEditor().getText(), Integer.parseInt(priorityField.getText()) , "True");
+                /*
+                if(cal.addTask(newTask) == 1){
+                    System.out.println("Task Added");
+                }
+                else{
+                    System.out.println("Task did not add");
+                }
+                */
                 
-                System.out.println("Task Added");
              }
         });
         
