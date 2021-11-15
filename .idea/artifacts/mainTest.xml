@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="mainTest">
+    <output-path>$PROJECT_DIR$/out/artifacts/mainTest</output-path>
+    <root id="root">
+      <element id="archive" name="mainTest.jar" />
+      <element id="archive" name="prj-02-the_completionist.jar">
+        <element id="module-output" name="prj-02-the_completionist" />
+      </element>
+    </root>
+  </artifact>
+</component>
