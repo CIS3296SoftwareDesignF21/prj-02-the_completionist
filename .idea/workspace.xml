@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="mainTest" />
+      <artifact name="prj-02-the_completionist:jar" />
     </artifacts-to-build>
   </component>
   <component name="BranchesTreeState">
@@ -24,8 +24,25 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4117b724-82f6-4eb4-80d9-72a84280722d" name="Changes" comment="Changes">
+    <list default="true" id="4117b724-82f6-4eb4-80d9-72a84280722d" name="Changes" comment="notepad pane">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/prj_02_the_completionist_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Add_Task_Pane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Calendar_Pane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main_Menu_Pane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Notepad_Pane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pomodoro_Timer_Pane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/guiMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/mainTest.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo copy/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo copy/guiMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Calendar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Calendar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/to_do_list.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/to_do_list.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prj-02-the_completionist.iml" beforeDir="false" afterPath="$PROJECT_DIR$/prj-02-the_completionist.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,13 +67,20 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="JavaFX" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
   </component>
-  <component name="RunManager" selected="Application.main_menu">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.guiMain">
     <configuration name="MyFxApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MyFxApp" />
       <module name="prj-02-the_completionist" />
@@ -64,10 +88,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="guiMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="guiMain" />
+      <module name="prj-02-the_completionist" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.6" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="main" />
+      <module name="prj-02-the_completionist" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -79,15 +111,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.main" />
+      <item itemvalue="Application.main_menu" />
+      <item itemvalue="Application.MyFxApp" />
+      <item itemvalue="Application.guiMain" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.guiMain" />
+        <item itemvalue="Application.main" />
         <item itemvalue="Application.main_menu" />
         <item itemvalue="Application.MyFxApp" />
-        <item itemvalue="Application.main" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -124,5 +163,39 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes" />
     <option name="LAST_COMMIT_MESSAGE" value="Changes" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="304" y="184" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1637086456994">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="304" y="184" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1637086456994" />
+    <state x="627" y="234" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1637083116760">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="627" y="234" key="#com.intellij.ide.macro.MacrosDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1637083116760" />
+    <state x="623" y="280" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1637083585152">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="623" y="280" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1637083585152" />
+    <state width="1638" height="202" key="GridCell.Tab.0.bottom" timestamp="1637086460069">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="202" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1637086460069" />
+    <state width="1638" height="202" key="GridCell.Tab.0.center" timestamp="1637086460067">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="202" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1637086460067" />
+    <state width="1638" height="202" key="GridCell.Tab.0.left" timestamp="1637086460066">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="202" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1637086460066" />
+    <state width="1638" height="202" key="GridCell.Tab.0.right" timestamp="1637086460068">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="202" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1637086460068" />
+    <state x="160" y="151" width="1520" height="843" key="SettingsEditor" timestamp="1637086201087">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="160" y="151" width="1520" height="843" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1637086201087" />
   </component>
 </project>
