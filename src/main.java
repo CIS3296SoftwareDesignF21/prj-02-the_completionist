@@ -26,7 +26,7 @@ public class main
     public static void main(String args[]) throws FileNotFoundException
     {
         
-        //Calendar cal2 = new Calendar();
+        Calendar cal2 = new Calendar();
         //cal2.addTask();
         //cal2.printCalendar();
         
@@ -201,7 +201,7 @@ public class main
             if ( (i > 1) && ( ((firstDayOfMonth + i - 2) % 7) == 0 ) )
             {
                 yCoord += 50;
-                xCoord = -50;
+                xCoord = -42;
             }
             xCoord += 55;
             row = new Integer((i + firstDayOfMonth - 2) / 7);

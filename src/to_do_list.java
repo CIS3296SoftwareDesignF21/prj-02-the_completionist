@@ -22,5 +22,13 @@ public class to_do_list {
             System.out.println();
         }
     }
+    
+    public ArrayList getList(){
+        return to_do_list;
+    }
+    
+    public int getSize(){
+        return to_do_list.size();
+    }
 
 }
