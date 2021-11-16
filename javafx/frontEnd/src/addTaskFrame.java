@@ -65,7 +65,7 @@ public class addTaskFrame extends Application {
         });
         
         grid.add(btn, 0, 6);
-        Scene scene = new Scene(grid, 300, 250);
+        Scene scene = new Scene(grid, 350, 250);
 
         primaryStage.setScene(scene);
         primaryStage.show();
