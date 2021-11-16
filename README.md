@@ -34,7 +34,8 @@ https://drive.google.com/file/d/1ZA55OEslf93hhpxhqoJ5u4RYq3rrBt0C/view?usp=shari
 https://github.com/CIS3296SoftwareDesignF21/prj-02-the_completionist/blob/main/Week2.md
 
 ## Week 3 UML Diagram
-![completionist_uml drawio](https://user-images.githubusercontent.com/77748463/142041589-d543131a-7146-49bd-a8f0-7d9687fb6ea0.png)
+![completionist_uml drawio](https://user-images.githubusercontent.com/77748463/142041738-244333a0-227d-482d-85c1-41322fbd2098.png)
+
 
 # Week 3 Materials
 
