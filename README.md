@@ -12,7 +12,7 @@ The key features of this software include:
 These features are able to communicate and interact with each other. For example, when the user adds tasks to the to-do list, those tasks will also be added to the calendar. The calendar is able to import the tasks of the day into a daily to-do list. Besides the calendar and to-do list, The Completionist has a toolbox assortment of features to improve productivity. The Pomodoro Timer is derived from the Pomodoro Technique, a time management method that uses a timer to break work into intervals of 25 minutes, separated by short breaks. We implement our own version of the Pomodoro Timer in The Completionist to help users stay on top of their work. Additionally, the Notes tool will allow users to quickly jot down ideas to help sort through their thoughts. 
 
 # How to Build
-Download the latest release and unzip contents. Knowing the file path to the download, navigate to prj-02-the_completionist in the terminal. From here, change the directory to prj-02-the_completionist -> out -> artifacts -> mainTest. Within this directory, there exists a file called prj-02-the_completionist.jar. Proceed with the following command, java -jar prj-02-the_completionist.jar. The .jar file should execute successfully.  
+Download the latest release and unzip contents. Knowing the file path to the download, navigate to prj-02-the_completionist in the terminal. From here, change the directory to prj-02-the_completionist -> out -> artifacts -> mainTest. Within this directory, there exists a file called prj-02-the_completionist.jar. Proceed with the following command, java -jar prj-02-the_completionist.jar. The .jar file should execute successfully. Current v0.1.1-alpha functionality includes the ability to add tasks to the calendar and to the to-do list. One is able to add tasks to the calendar with each run of the .jar file. For the to-do list, one is able to add tasks to the to-do list by modifying lines of code. The Completionist is an open-source project that can be modified accordingly. Future modifications and permissions subject to change. 
 
 # How to Install
 Future instructions TBD upon further development.
@@ -25,5 +25,11 @@ https://docs.google.com/document/d/1gTEzMWscNSvW-PFdMYA6CQFRUvlqC2HmPmQjqyizfhc/
 
 # Week1.md
 https://drive.google.com/file/d/1ZA55OEslf93hhpxhqoJ5u4RYq3rrBt0C/view?usp=sharing
+
+# Week2.md
+https://github.com/CIS3296SoftwareDesignF21/prj-02-the_completionist/blob/main/Week2.md
+
+# Week 2 UML Diagram
+![completionist_uml drawio](https://user-images.githubusercontent.com/77748463/140963703-975170be-a4ce-4b34-8212-f9a6a77cdc53.png)
 
 
