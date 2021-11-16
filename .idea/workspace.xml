@@ -26,6 +26,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4117b724-82f6-4eb4-80d9-72a84280722d" name="Changes" comment="Changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +37,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -56,7 +58,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.main_menu">
+  <component name="RunManager" selected="Application.main">
     <configuration name="MyFxApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MyFxApp" />
       <module name="prj-02-the_completionist" />
@@ -65,9 +67,10 @@
       </method>
     </configuration>
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.6" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="main" />
+      <module name="prj-02-the_completionist" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -79,15 +82,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.main" />
+      <item itemvalue="Application.main_menu" />
+      <item itemvalue="Application.MyFxApp" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.main" />
         <item itemvalue="Application.main_menu" />
         <item itemvalue="Application.MyFxApp" />
-        <item itemvalue="Application.main" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -124,5 +132,19 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes" />
     <option name="LAST_COMMIT_MESSAGE" value="Changes" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2344" y="199" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1637021900988">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2344" y="199" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637021900988" />
+    <state x="2693" y="247" key="#com.intellij.ide.util.MemberChooser" timestamp="1637021788844">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2693" y="247" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637021788844" />
+    <state x="2545" y="255" key="run.anything.popup" timestamp="1637020390169">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2545" y="255" key="run.anything.popup/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637020390169" />
   </component>
 </project>
