@@ -23,20 +23,29 @@ https://docs.google.com/document/d/1y7izQUvN6UzQYRuw_cb_xHtADV20pzqIIkr6MgNdVRU/
 # Dynamic Ideas, Insights, and Feedback
 https://docs.google.com/document/d/1gTEzMWscNSvW-PFdMYA6CQFRUvlqC2HmPmQjqyizfhc/edit?usp=sharing
 
-# Week1.md
+# Week 1 Materials
+
+## Week1.md
 https://drive.google.com/file/d/1ZA55OEslf93hhpxhqoJ5u4RYq3rrBt0C/view?usp=sharing
 
-# Week2.md
+# Week 2 Materials
+
+## Week2.md
 https://github.com/CIS3296SoftwareDesignF21/prj-02-the_completionist/blob/main/Week2.md
 
-# Week 2 UML Diagram
+## Week 2 UML Diagram
 ![completionist_uml drawio](https://user-images.githubusercontent.com/77748463/140963703-975170be-a4ce-4b34-8212-f9a6a77cdc53.png)
 
-# Sequence Diagram 1
-![image](https://user-images.githubusercontent.com/60636600/141896080-eda9cd0a-a07d-4b9e-a1f0-000985b974de.png)
-The user wants to add a new task, so from the main menu pane, he goes to the 'add task pane'. He enters the new task information and hits the 'add task' button. This will create a new Task object which will get passed to the Calendar object via the addTask() method. When successful, the method returns and the new information gets propagated to the main_menu_pane.
+# Week 3 Materials
 
-# Sequence Diagram 2
+## Week3.md
+https://github.com/CIS3296SoftwareDesignF21/prj-02-the_completionist/blob/main/Week3.md
+
+## Sequence Diagram 1
+![image](https://user-images.githubusercontent.com/60636600/141896080-eda9cd0a-a07d-4b9e-a1f0-000985b974de.png)
+Sarah wants to add a new task, so from the main menu pane, she goes to the 'add task pane'. She enters the new task information and hits the 'add task' button. This will create a new Task object which will get passed to the Calendar object via the addTask() method. When successful, the method returns and the new information gets propagated to the main_menu_pane.
+
+## Sequence Diagram 2
 ![image](https://user-images.githubusercontent.com/61302705/141896567-7a4068dd-aef6-49a6-8eea-c0412a75503a.png)
-Timmy would like to use the Completionist's integrated Pomodoro Timer. He wants to make efficient use of his time while completing some studies and homework. He opens the desktop application which initializes the main menu interface. On the backend, the readFromFile() function populates the daily tasks and upcoming tasks of the main menu. From the main menu, Timmy clicks on the Pomodoro Timer feature to initialize the tool. Within the tool, he uses setTimer(), startTimer(), and finally resetTimer(). All methods returning values to the Pomodoro Timer pane. 
+Timmy would like to use the Completionist's integrated Pomodoro Timer. He wants to make efficient use of his time while completing some studies and homework. He opens the desktop application which initializes the main menu interface. On the backend, the readFromFile() function populates the daily tasks and upcoming tasks of the main menu. From the main menu, Timmy clicks on the Pomodoro Timer feature to initialize the tool. Within the tool, he uses setTimer(), startTimer(), and finally resetTimer(). All methods return values to the Pomodoro Timer pane. 
 
