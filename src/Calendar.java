@@ -157,7 +157,6 @@ public class Calendar {
     
     //This will convert the numerical form the month to word form of the month, to find the correct file.
     private String monthToString(int input){
-
         switch(input){
             case 1:
                 return "jan";
@@ -187,7 +186,6 @@ public class Calendar {
                 System.out.println("Invalid month");
                 return "error";
         }
-            
     }
 
     public void printCalendar() throws FileNotFoundException {
