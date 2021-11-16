@@ -32,4 +32,8 @@ https://github.com/CIS3296SoftwareDesignF21/prj-02-the_completionist/blob/main/W
 # Week 2 UML Diagram
 ![completionist_uml drawio](https://user-images.githubusercontent.com/77748463/140963703-975170be-a4ce-4b34-8212-f9a6a77cdc53.png)
 
+# Sequence Diagram 1
+![completionist_uml drawio]![image](https://user-images.githubusercontent.com/60636600/141896080-eda9cd0a-a07d-4b9e-a1f0-000985b974de.png)
+
+
 
