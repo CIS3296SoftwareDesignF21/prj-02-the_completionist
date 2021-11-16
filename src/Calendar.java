@@ -2,118 +2,70 @@ import java.io.*;
 import java.util.*;
 
 public class Calendar {
-    private ArrayList[] jan, feb, mar, april, may, june, jul, aug, sept, oct, nov, dec;
+    private List<List<Task>> jan, feb, mar, april, may, june, jul, aug, sept, oct, nov, dec;
 
     public Calendar(){
-        jan = new ArrayList[31];
-        feb = new ArrayList[28];
-        mar = new ArrayList[31];
-        may = new ArrayList[31];
-        jul = new ArrayList[31];
-        aug = new ArrayList[31];
-        oct = new ArrayList[31];
-        dec = new ArrayList[31];
-        april = new ArrayList[30];
-        june = new ArrayList[30];
-        nov = new ArrayList[30]; 
+        jan = new ArrayList<List<Task>>(30);
+        feb = new ArrayList<List<Task>>(29);
+        mar = new ArrayList<List<Task>>(31);
+        april = new ArrayList<List<Task>>(30);
+        may = new ArrayList<List<Task>>(31);
+        june = new ArrayList<List<Task>>(30);
+        jul = new ArrayList<List<Task>>(31);
+        aug = new ArrayList<List<Task>>(31);
+        sept = new ArrayList<List<Task>>(30);
+        oct = new ArrayList<List<Task>>(31);
+        nov = new ArrayList<List<Task>>(30);
+        dec = new ArrayList<List<Task>>(31); 
     }
 
-    public int addTask(){
+    public int addTask(Task newTask){
 
-        String month;
-        int date;
-    
-        Scanner myScanner = new Scanner(System.in);
-
-        System.out.println("Enter task name: ");
-        String taskName =  myScanner.nextLine();
-
-        System.out.println("Enter due date (MM/DD/YYYY): ");
-        String dueDate = myScanner.nextLine();
-
-        System.out.println("Enter priority: ");
-        String priority = myScanner.nextLine();
-
-        System.out.println("Enter Flag (true/false): ");
-        String flag = myScanner.nextLine();
-        
-        writeToFile(taskName, dueDate, priority, flag);
-        //saveToArray(taskName, dueDate, priority, flag);
-        //test[1].add( new Task(taskName, dueDate, Integer.parseInt(priority), flag));
-       
-
-        myScanner.close();
-
-        return 1;
-    }
-    /*
-    private void saveToArray(String taskName, String dueDate, String priority, String flag){
-
-        String month = monthFinder(dueDate);
-        int date = dateFinder(dueDate);
+        String month = monthFinder(newTask.getDate());
+        int date = dateFinder(newTask.getDate());
 
         if(month.equals("jan")){
-            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
-            jan[date] = newTask;
-            
+            jan.get(date).add(newTask);
         }
         else if(month.equals("feb")){
-            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
-            feb[date] = newTask;
-    
+            feb.get(date).add(newTask);
         }
         else if(month.equals("mar")){
-            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
-            mar[date] = newTask;
-    
+            mar.get(date).add(newTask);
         }
         else if(month.equals("april")){
-            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
-            april[date] = newTask;
+            april.get(date).add(newTask);
         }
         else if(month.equals("may")){
-            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
-            may[date] = newTask;
-    
+            may.get(date).add(newTask);
         }
         else if(month.equals("june")){
-            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
-            june[date] = newTask;
-    
+            june.get(date).add(newTask);
         }
         else if(month.equals("jul")){
-            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
-            jul[date] = newTask;
-    
+            jul.get(date).add(newTask);
         }
         else if(month.equals("aug")){
-            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
-            aug[date] = newTask;
-    
+            aug.get(date).add(newTask);
         }
         else if(month.equals("sept")){
-            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
-            sept[date] = newTask;
-    
+            sept.get(date).add(newTask);
         }
         else if(month.equals("oct")){
-            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
-            oct[date] = newTask;
-    
+            oct.get(date).add(newTask);
         }
         else if(month.equals("nov")){
-            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
-            nov[date] = newTask;
-    
+            nov.get(date).add(newTask);
         }
         else if(month.equals("dec")){
-            Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
-            dec[date] = newTask;
-    
+            dec.get(date).add(newTask);
         }
+        else{
+            return -1;
+        }
+        return 1;
     }
-    */
-
+ 
     private int dateFinder(String input){
         String[] parsedString = input.split("/");
         return Integer.parseInt(parsedString[1]);
@@ -138,19 +90,6 @@ public class Calendar {
 
         try {
             FileWriter myWriter = new FileWriter( month + ".txt", true);
-//            for (int i = 1; i < 31; i++) {
-//                if (date != i) {
-//                    myWriter.write(i + " :\n");
-//                } else {
-//                    myWriter.write(i + " :\n");
-//                    myWriter.write("{\nName: " + taskName + "\n");
-//                    myWriter.write("Priority: " + priority + "\n");
-//                    myWriter.write("Flag: " + flag + "\n");
-//                    myWriter.write("}\n");
-//                }
-//            }
-//            myWriter.close();
-
             myWriter.write("\n{\nName: " + taskName + "\n");
             myWriter.write("Date: " + dueDate + "\n");
             myWriter.write("Priority: " + priority + "\n");
@@ -177,11 +116,16 @@ public class Calendar {
             while(myScanner.hasNextLine()){
                 
                 String line = myScanner.nextLine();
-                if(line.equals("{\n") || line.equals("}\n")){
+                System.out.println("Current Line: "  + line);
+                
+                if(line.equals("{") || line.equals("}")){
+
                     continue;
                 }
                 else{
+                    System.out.println("Inside else statement");
                     String[] stringArr = line.split(":");
+
                     if(stringArr[0].equals("Name")){
                         taskName = stringArr[1];
                         continue;
@@ -202,44 +146,8 @@ public class Calendar {
                 }
             }
             int date = dateFinder(dueDate);
+            myScanner.close();
             //jan[date].add( new Task(taskName, dueDate, Integer.parseInt(priority), flag));
-        }
-        catch (FileNotFoundException e) {
-            System.out.println("Error");
-            e.printStackTrace();
-        }
-      
-        try {
-            File fileObj = new File("feb.txt");
-            Scanner myScanner = new Scanner(fileObj);
-
-            while(myScanner.hasNextLine()){
-                
-                String line = myScanner.nextLine();
-                if(line.equals("{\n") || line.equals("}\n")){
-                    continue;
-                }
-                else{
-                    String[] stringArr = line.split(":");
-                    if(stringArr[0].equals("Name")){
-                        taskName = stringArr[1];
-                        continue;
-                    }
-                    else if(stringArr[0].equals("Date")){
-                        dueDate = stringArr[1];
-                        continue;
-                    }
-                    else if(stringArr[0].equals("Priority")){
-                        priority = stringArr[1];
-                        continue;
-                    }
-                    else{
-                        flag = stringArr[1];
-                        continue;
-                    }
-
-                }
-            }
         }
         catch (FileNotFoundException e) {
             System.out.println("Error");
