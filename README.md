@@ -35,5 +35,7 @@ https://github.com/CIS3296SoftwareDesignF21/prj-02-the_completionist/blob/main/W
 # Sequence Diagram 1
 ![completionist_uml drawio]![image](https://user-images.githubusercontent.com/60636600/141896080-eda9cd0a-a07d-4b9e-a1f0-000985b974de.png)
 
+# Sequence Diagram 2
+![image](https://user-images.githubusercontent.com/61302705/141896567-7a4068dd-aef6-49a6-8eea-c0412a75503a.png)
 
 
