@@ -4,14 +4,13 @@ public class Task {
     private String name;
     private String date;
     private int priority;
-    private String flag;
-    private int index;
+    private String tag;
 
-    public Task(String name, String date, int priority, String flag){
+    public Task(String name, String date, int priority, String tag){
         this.name = name;
         this.date = date;
         this.priority = priority;
-        this.flag = flag;
+        this.tag = tag;
     }
 
     public String getName() {
@@ -38,23 +37,15 @@ public class Task {
         this.priority = priority;
     }
 
-    public String getFlag() {
-        return flag;
+    public String getTag() {
+        return tag;
     }
 
-    public void setFlag(String flag) {
-        this.flag = flag;
-    }
-
-    public int getIndex() {
-        return index;
-    }
-
-    public void setIndex(int index) {
-        this.index = index;
+    public void setTag(String tag) {
+        this.tag = tag;
     }
 
     public String toString(){
-        return "Task Name: " + name + "\nTask Date: " + date + "\nTask Priority: " + priority;
+        return "Task Name: " + name + "\nTask Date: " + date + "\nTask Priority: " + priority + "\nTask Tag: " + tag;
     }
 }
