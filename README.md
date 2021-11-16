@@ -38,5 +38,5 @@ The user wants to add a new task, so from the main menu pane, he goes to the 'ad
 
 # Sequence Diagram 2
 ![image](https://user-images.githubusercontent.com/61302705/141896567-7a4068dd-aef6-49a6-8eea-c0412a75503a.png)
-
+Timmy would like to use the Completionist's integrated Pomodoro Timer. He wants to make efficient use of his time while completing some studies and homework. He opens the desktop application which initializes the main menu interface. On the backend, the readFromFile() function populates the daily tasks and upcoming tasks of the main menu. From the main menu, Timmy clicks on the Pomodoro Timer feature to initialize the tool. Within the tool, he uses setTimer(), startTimer(), and finally resetTimer(). All methods returning values to the Pomodoro Timer pane. 
 
