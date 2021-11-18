@@ -16,10 +16,10 @@ public class Main_Menu_Pane extends Application  {
         primaryStage.setTitle("Home Menu");
 
         Button button1 = new Button("Calendar");
-        Calendar_Pane cal = new Calendar_Pane();
+        CalendarPane cal = new CalendarPane();
         button1.setOnAction(e -> {
             try {
-                cal.start(primaryStage);
+                cal.main();
             } catch (FileNotFoundException ex) {
                 ex.printStackTrace();
             }
