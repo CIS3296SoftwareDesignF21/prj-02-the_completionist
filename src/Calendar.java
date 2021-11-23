@@ -19,6 +19,9 @@ public class Calendar {
         dec = new ArrayList<List<Task>>(31); 
     }
 
+
+    //adds the task to the arraylist
+
     public int addTask(Task newTask){
 
         String month = monthFinder(newTask.getDate());
@@ -82,11 +85,10 @@ public class Calendar {
 
     }
 
-    //saves the task to correct month text file.
+    //saves the task to correct month text file
     private void writeToFile(String taskName, String dueDate, String priority, String flag){
 
         String month = monthFinder(dueDate);
-        int date = dateFinder(dueDate);
 
         try {
             FileWriter myWriter = new FileWriter( month + ".txt", true);
@@ -104,54 +106,58 @@ public class Calendar {
 
     }
 
+    //reads the saved tasks from the files and adds them to the array.
     public void readFiles(){
-        String taskName, dueDate, priority, flag;
+        String taskName, dueDate, priority, flag, month;
         taskName = null;
         dueDate = priority = flag = null;
-
-        try {
-            File fileObj = new File("nov.txt");
-            Scanner myScanner = new Scanner(fileObj);
-
-            while(myScanner.hasNextLine()){
-                
-                String line = myScanner.nextLine();
-                System.out.println("Current Line: "  + line);
-                
-                if(line.equals("{") || line.equals("}")){
-
-                    continue;
+        for(int i = 1; i <= 12; i++){
+            month = monthToString(i);
+            try {
+                File fileObj = new File(month+".txt");
+                Scanner myScanner = new Scanner(fileObj);
+    
+                while(myScanner.hasNextLine()){
+                    
+                    String line = myScanner.nextLine();
+                    System.out.println("Current Line: "  + line);
+                    
+                    if(line.equals("{") || line.equals("}")){
+    
+                        continue;
+                    }
+                    else{
+                        System.out.println("Inside else statement");
+                        String[] stringArr = line.split(":");
+    
+                        if(stringArr[0].equals("Name")){
+                            taskName = stringArr[1];
+                            continue;
+                        }
+                        else if(stringArr[0].equals("Date")){
+                            dueDate = stringArr[1];
+                            continue;
+                        }
+                        else if(stringArr[0].equals("Priority")){
+                            priority = stringArr[1];
+                            continue;
+                        }
+                        else {
+                            flag = stringArr[1];
+                            continue;
+                        }
+    
+                    }
                 }
-                else{
-                    System.out.println("Inside else statement");
-                    String[] stringArr = line.split(":");
-
-                    if(stringArr[0].equals("Name")){
-                        taskName = stringArr[1];
-                        continue;
-                    }
-                    else if(stringArr[0].equals("Date")){
-                        dueDate = stringArr[1];
-                        continue;
-                    }
-                    else if(stringArr[0].equals("Priority")){
-                        priority = stringArr[1];
-                        continue;
-                    }
-                    else {
-                        flag = stringArr[1];
-                        continue;
-                    }
-
-                }
+                myScanner.close();
+                Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
+                addTask(newTask);
+                
             }
-            int date = dateFinder(dueDate);
-            myScanner.close();
-            //jan[date].add( new Task(taskName, dueDate, Integer.parseInt(priority), flag));
-        }
-        catch (FileNotFoundException e) {
-            System.out.println("Error");
-            e.printStackTrace();
+            catch (FileNotFoundException e) {
+                System.out.println("Error");
+                e.printStackTrace();
+            }
         }
     }
     
