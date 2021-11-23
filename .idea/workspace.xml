@@ -1,11 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="prj-02-the_completionist:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="4117b724-82f6-4eb4-80d9-72a84280722d" name="Changes" comment="" />
+    <list default="true" id="4117b724-82f6-4eb4-80d9-72a84280722d" name="Changes" comment="notepad pane">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Calendar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Calendar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/to_do_list.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/to_do_list.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaFXApplication" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -18,36 +54,69 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="JavaFX" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.guiMain">
+    <configuration name="MyFxApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MyFxApp" />
+      <module name="prj-02-the_completionist" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="guiMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="guiMain" />
+      <module name="prj-02-the_completionist" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.6" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
       <module name="prj-02-the_completionist" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+    <configuration name="main_menu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main_menu" />
       <module name="prj-02-the_completionist" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.main" />
+      <item itemvalue="Application.main_menu" />
+      <item itemvalue="Application.MyFxApp" />
+      <item itemvalue="Application.guiMain" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.guiMain" />
         <item itemvalue="Application.main" />
+        <item itemvalue="Application.main_menu" />
+        <item itemvalue="Application.MyFxApp" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="4117b724-82f6-4eb4-80d9-72a84280722d" name="Changes" comment="" />
@@ -56,6 +125,14 @@
       <option name="presentableId" value="Default" />
       <updated>1636426638865</updated>
     </task>
+    <task id="LOCAL-00001" summary="Changes">
+      <created>1636482842963</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1636482842963</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -69,5 +146,43 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="304" y="184" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1637086456994">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="304" y="184" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1637086456994" />
+    <state x="627" y="234" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1637083116760">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="627" y="234" key="#com.intellij.ide.macro.MacrosDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1637083116760" />
+    <state x="623" y="280" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1637083585152">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="623" y="280" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1637083585152" />
+    <state width="1638" height="202" key="GridCell.Tab.0.bottom" timestamp="1637087151164">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="202" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1637087151164" />
+    <state width="1638" height="202" key="GridCell.Tab.0.center" timestamp="1637087151162">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="202" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1637087151162" />
+    <state width="1638" height="202" key="GridCell.Tab.0.left" timestamp="1637087151161">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="202" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1637087151161" />
+    <state width="1638" height="202" key="GridCell.Tab.0.right" timestamp="1637087151163">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="202" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1637087151163" />
+    <state x="160" y="151" width="1520" height="843" key="SettingsEditor" timestamp="1637086201087">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="160" y="151" width="1520" height="843" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1637086201087" />
   </component>
 </project>

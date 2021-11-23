@@ -19,7 +19,9 @@ public class Calendar {
         dec = new ArrayList<List<Task>>(31); 
     }
 
+
     //adds the task to the arraylist
+
     public int addTask(Task newTask){
 
         String month = monthFinder(newTask.getDate());
@@ -109,8 +111,6 @@ public class Calendar {
         String taskName, dueDate, priority, flag, month;
         taskName = null;
         dueDate = priority = flag = null;
-
-
         for(int i = 1; i <= 12; i++){
             month = monthToString(i);
             try {
@@ -159,7 +159,6 @@ public class Calendar {
                 e.printStackTrace();
             }
         }
-        
     }
     
     //This will convert the numerical form the month to word form of the month, to find the correct file.
