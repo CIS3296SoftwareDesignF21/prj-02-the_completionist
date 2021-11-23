@@ -2,46 +2,68 @@ import java.io.*;
 import java.util.*;
 
 public class Calendar {
-    private ArrayList[] jan, feb, mar, april, may, june, jul, aug, sept, oct, nov, dec;
+    private List<List<Task>> jan, feb, mar, april, may, june, jul, aug, sept, oct, nov, dec;
 
     public Calendar(){
-        jan = new ArrayList[31];
-        feb = new ArrayList[28];
-        mar = new ArrayList[31];
-        may = new ArrayList[31];
-        jul = new ArrayList[31];
-        aug = new ArrayList[31];
-        oct = new ArrayList[31];
-        dec = new ArrayList[31];
-        april = new ArrayList[30];
-        june = new ArrayList[30];
-        nov = new ArrayList[30]; 
+        jan = new ArrayList<List<Task>>(30);
+        feb = new ArrayList<List<Task>>(29);
+        mar = new ArrayList<List<Task>>(31);
+        april = new ArrayList<List<Task>>(30);
+        may = new ArrayList<List<Task>>(31);
+        june = new ArrayList<List<Task>>(30);
+        jul = new ArrayList<List<Task>>(31);
+        aug = new ArrayList<List<Task>>(31);
+        sept = new ArrayList<List<Task>>(30);
+        oct = new ArrayList<List<Task>>(31);
+        nov = new ArrayList<List<Task>>(30);
+        dec = new ArrayList<List<Task>>(31); 
     }
 
-    public int addTask(){
+    //adds the task to the arraylist
+    public int addTask(Task newTask){
 
-        String month;
-        int date;
-    
-        Scanner myScanner = new Scanner(System.in);
+        String month = monthFinder(newTask.getDate());
+        int date = dateFinder(newTask.getDate());
 
-        System.out.println("Enter task name: ");
-        String taskName =  myScanner.nextLine();
-
-        System.out.println("Enter due date (MM/DD/YYYY): ");
-        String dueDate = myScanner.nextLine();
-
-        System.out.println("Enter priority: ");
-        String priority = myScanner.nextLine();
-
-        System.out.println("Enter Flag (true/false): ");
-        String flag = myScanner.nextLine();
-        
-        writeToFile(taskName, dueDate, priority, flag);
-        //test[1].add( new Task(taskName, dueDate, Integer.parseInt(priority), flag));
-       
-        myScanner.close();
-
+        if(month.equals("jan")){
+            jan.get(date).add(newTask);
+        }
+        else if(month.equals("feb")){
+            feb.get(date).add(newTask);
+        }
+        else if(month.equals("mar")){
+            mar.get(date).add(newTask);
+        }
+        else if(month.equals("april")){
+            april.get(date).add(newTask);
+        }
+        else if(month.equals("may")){
+            may.get(date).add(newTask);
+        }
+        else if(month.equals("june")){
+            june.get(date).add(newTask);
+        }
+        else if(month.equals("jul")){
+            jul.get(date).add(newTask);
+        }
+        else if(month.equals("aug")){
+            aug.get(date).add(newTask);
+        }
+        else if(month.equals("sept")){
+            sept.get(date).add(newTask);
+        }
+        else if(month.equals("oct")){
+            oct.get(date).add(newTask);
+        }
+        else if(month.equals("nov")){
+            nov.get(date).add(newTask);
+        }
+        else if(month.equals("dec")){
+            dec.get(date).add(newTask);
+        }
+        else{
+            return -1;
+        }
         return 1;
     }
  
@@ -61,11 +83,10 @@ public class Calendar {
 
     }
 
-    //saves the task to correct month text file.
+    //saves the arraylist to the
     private void writeToFile(String taskName, String dueDate, String priority, String flag){
 
         String month = monthFinder(dueDate);
-        int date = dateFinder(dueDate);
 
         try {
             FileWriter myWriter = new FileWriter( month + ".txt", true);
@@ -83,97 +104,62 @@ public class Calendar {
 
     }
 
+    //reads the saved tasks from the files and adds them to the array.
     public void readFiles(){
-        String taskName, dueDate, priority, flag;
+        String taskName, dueDate, priority, flag, month;
         taskName = null;
         dueDate = priority = flag = null;
 
-        try {
-            File fileObj = new File("nov.txt");
-            Scanner myScanner = new Scanner(fileObj);
 
-            while(myScanner.hasNextLine()){
-                
-                String line = myScanner.nextLine();
-                System.out.println("Current Line: "  + line);
-                
-                if(line.equals("{") || line.equals("}")){
-
-                    continue;
-                }
-                else{
-                    System.out.println("Inside else statement");
-                    String[] stringArr = line.split(":");
-
-                    if(stringArr[0].equals("Name")){
-                        System.out.println(stringArr[1]);
-                        taskName = stringArr[1];
-                        continue;
-                    }
-                    else if(stringArr[0].equals("Date")){
-                        System.out.println(stringArr[1]);
-                        dueDate = stringArr[1];
-                        continue;
-                    }
-                    else if(stringArr[0].equals("Priority")){
-                        System.out.println(stringArr[1]);
-                        priority = stringArr[1];
-                        continue;
-                    }
-                    else {
-                        System.out.println(stringArr[1]);
-                        flag = stringArr[1];
-                        continue;
-                    }
-
-                }
-            }
-            int date = dateFinder(dueDate);
-            myScanner.close();
-            //jan[date].add( new Task(taskName, dueDate, Integer.parseInt(priority), flag));
-        }
-        catch (FileNotFoundException e) {
-            System.out.println("Error");
-            e.printStackTrace();
-        }
-      /*
-        try {
-            File fileObj = new File("feb.txt");
-            Scanner myScanner = new Scanner(fileObj);
-
-            while(myScanner.hasNextLine()){
-                
-                String line = myScanner.nextLine();
-                if(line.equals("{\n") || line.equals("}\n")){
-                    continue;
-                }
-                else{
-                    String[] stringArr = line.split(":");
-                    if(stringArr[0].equals("Name")){
-                        taskName = stringArr[1];
-                        continue;
-                    }
-                    else if(stringArr[0].equals("Date")){
-                        dueDate = stringArr[1];
-                        continue;
-                    }
-                    else if(stringArr[0].equals("Priority")){
-                        priority = stringArr[1];
+        for(int i = 1; i <= 12; i++){
+            month = monthToString(i);
+            try {
+                File fileObj = new File(month+".txt");
+                Scanner myScanner = new Scanner(fileObj);
+    
+                while(myScanner.hasNextLine()){
+                    
+                    String line = myScanner.nextLine();
+                    System.out.println("Current Line: "  + line);
+                    
+                    if(line.equals("{") || line.equals("}")){
+    
                         continue;
                     }
                     else{
-                        flag = stringArr[1];
-                        continue;
+                        System.out.println("Inside else statement");
+                        String[] stringArr = line.split(":");
+    
+                        if(stringArr[0].equals("Name")){
+                            taskName = stringArr[1];
+                            continue;
+                        }
+                        else if(stringArr[0].equals("Date")){
+                            dueDate = stringArr[1];
+                            continue;
+                        }
+                        else if(stringArr[0].equals("Priority")){
+                            priority = stringArr[1];
+                            continue;
+                        }
+                        else {
+                            flag = stringArr[1];
+                            continue;
+                        }
+    
                     }
-
                 }
+                myScanner.close();
+                Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
+                addTask(newTask);
+                
+            }
+            catch (FileNotFoundException e) {
+                System.out.println("Error");
+                e.printStackTrace();
             }
         }
-        catch (FileNotFoundException e) {
-            System.out.println("Error");
-            e.printStackTrace();
-        }
-        */
+        
     }
     
     //This will convert the numerical form the month to word form of the month, to find the correct file.
