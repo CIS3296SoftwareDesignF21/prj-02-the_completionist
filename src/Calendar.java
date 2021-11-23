@@ -83,7 +83,7 @@ public class Calendar {
 
     }
 
-    //saves the arraylist to the
+    //saves the task to correct month text file
     private void writeToFile(String taskName, String dueDate, String priority, String flag){
 
         String month = monthFinder(dueDate);
