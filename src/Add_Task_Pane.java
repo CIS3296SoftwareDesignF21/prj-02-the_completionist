@@ -51,15 +51,15 @@ public class Add_Task_Pane extends Application {
             @Override
             public void handle(ActionEvent event) {
 
-                //Task newTask = new Task(taskNameField.getText(), date.getEditor().getText(), Integer.parseInt(priorityField.getText()) , "True");
-                /*
+                Calendar cal = new Calendar();
+                Task newTask = new Task(taskNameField.getText(), date.getEditor().getText(), Integer.parseInt(priorityField.getText()) , "True");
+                
                 if(cal.addTask(newTask) == 1){
                     System.out.println("Task Added");
                 }
                 else{
                     System.out.println("Task did not add");
                 }
-                */
 
             }
         });

@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Calendar",
+            "request": "launch",
+            "mainClass": "Calendar",
+            "projectName": "prj-02-the_completionist_c3119410"
+        },
+        {
+            "type": "java",
+            "name": "Launch main_menu",
+            "request": "launch",
+            "mainClass": "main_menu",
+            "projectName": "prj-02-the_completionist_c3119410"
+        },
+        {
+            "type": "java",
+            "name": "Launch test",
+            "request": "launch",
+            "mainClass": "test",
+            "projectName": "prj-02-the_completionist_c3119410"
+        },
+        {
+            "type": "java",
             "name": "Launch main",
             "request": "launch",
             "mainClass": "main",
