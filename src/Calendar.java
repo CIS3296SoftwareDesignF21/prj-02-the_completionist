@@ -159,34 +159,34 @@ public class Calendar {
             return jan[date-1].toArray();
         }
         else if(month.equals("feb")){
-            return jan[date-1].toArray();
+            return feb[date-1].toArray();
         }
         else if(month.equals("mar")){
-            return jan[date-1].toArray();
+            return mar[date-1].toArray();
         }
         else if(month.equals("april")){
-            return jan[date-1].toArray();
+            return april[date-1].toArray();
         }
         else if(month.equals("may")){
-            return jan[date-1].toArray();
+            return may[date-1].toArray();
         }
         else if(month.equals("june")){
-            return jan[date-1].toArray();
+            return june[date-1].toArray();
         }
         else if(month.equals("jul")){
-            return jan[date-1].toArray();
+            return jul[date-1].toArray();
         }
         else if(month.equals("aug")){
-            return jan[date-1].toArray();
+            return aug[date-1].toArray();
         }
         else if(month.equals("sept")){
-            return jan[date-1].toArray();
+            return sept[date-1].toArray();
         }
         else if(month.equals("oct")){
-            return jan[date-1].toArray();
+            return oct[date-1].toArray();
         }
         else if(month.equals("nov")){
-            return jan[date-1].toArray();
+            return nov[date-1].toArray();
         }
         else{
             return dec[date-1].toArray();
