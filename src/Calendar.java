@@ -7,14 +7,14 @@ public class Calendar {
     public static void main(String[] args){
       Calendar cal = new Calendar();
 
-        if(cal.addTask(new Task("do Homework", "11/1/2021", 1, "true")) == -1){
+        if(cal.addTask(new Task("do Homework", "11/10/2021", 1, "true")) == -1){
             System.out.println("adding task failed");
         }
         else{
             System.out.println("test added successfully");
         }
 
-        System.out.println(cal.nov[0].toString());
+        System.out.println(cal.nov[9].toString());
     }
     public Calendar(){
 
@@ -149,47 +149,47 @@ public class Calendar {
         
     }
 
-    public Object[] readArray(String currentDate){
+    public ArrayList<Task> readArray(String currentDate){
 
         int date = dateFinder(currentDate);
         String month = monthFinder(currentDate);
         
 
         if(month.equals("jan")){
-            return jan[date-1].toArray();
+            return jan[date-1];
         }
         else if(month.equals("feb")){
-            return feb[date-1].toArray();
+            return feb[date-1];
         }
         else if(month.equals("mar")){
-            return mar[date-1].toArray();
+            return mar[date-1];
         }
         else if(month.equals("april")){
-            return april[date-1].toArray();
+            return april[date-1];
         }
         else if(month.equals("may")){
-            return may[date-1].toArray();
+            return may[date-1];
         }
         else if(month.equals("june")){
-            return june[date-1].toArray();
+            return june[date-1];
         }
         else if(month.equals("jul")){
-            return jul[date-1].toArray();
+            return jul[date-1];
         }
         else if(month.equals("aug")){
-            return aug[date-1].toArray();
+            return aug[date-1];
         }
         else if(month.equals("sept")){
-            return sept[date-1].toArray();
+            return sept[date-1];
         }
         else if(month.equals("oct")){
-            return oct[date-1].toArray();
+            return oct[date-1];
         }
         else if(month.equals("nov")){
-            return nov[date-1].toArray();
+            return nov[date-1];
         }
         else{
-            return dec[date-1].toArray();
+            return dec[date-1];
         }
         
     }
