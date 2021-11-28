@@ -25,11 +25,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4117b724-82f6-4eb4-80d9-72a84280722d" name="Changes" comment="notepad pane">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Calendar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Calendar.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/to_do_list.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/to_do_list.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calendar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +67,14 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.guiMain">
+  <component name="RunManager" selected="Application.Calendar">
+    <configuration name="Calendar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Calendar" />
+      <module name="prj-02-the_completionist" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MyFxApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MyFxApp" />
       <module name="prj-02-the_completionist" />
@@ -103,9 +110,11 @@
       <item itemvalue="Application.main_menu" />
       <item itemvalue="Application.MyFxApp" />
       <item itemvalue="Application.guiMain" />
+      <item itemvalue="Application.Calendar" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Calendar" />
         <item itemvalue="Application.guiMain" />
         <item itemvalue="Application.main" />
         <item itemvalue="Application.main_menu" />
@@ -164,22 +173,26 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="623" y="280" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1637083585152" />
-    <state width="1638" height="202" key="GridCell.Tab.0.bottom" timestamp="1637087151164">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1878" height="355" key="GridCell.Tab.0.bottom" timestamp="1638130228258">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1638" height="202" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1637087151164" />
-    <state width="1638" height="202" key="GridCell.Tab.0.center" timestamp="1637087151162">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1878" height="355" key="GridCell.Tab.0.bottom/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1638130228258" />
+    <state width="1878" height="355" key="GridCell.Tab.0.center" timestamp="1638130228256">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1638" height="202" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1637087151162" />
-    <state width="1638" height="202" key="GridCell.Tab.0.left" timestamp="1637087151161">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1878" height="355" key="GridCell.Tab.0.center/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1638130228256" />
+    <state width="1878" height="355" key="GridCell.Tab.0.left" timestamp="1638130228255">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1638" height="202" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1637087151161" />
-    <state width="1638" height="202" key="GridCell.Tab.0.right" timestamp="1637087151163">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1878" height="355" key="GridCell.Tab.0.left/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1638130228255" />
+    <state width="1878" height="355" key="GridCell.Tab.0.right" timestamp="1638130228257">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1638" height="202" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1637087151163" />
+    <state width="1878" height="355" key="GridCell.Tab.0.right/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1638130228257" />
     <state x="160" y="151" width="1520" height="843" key="SettingsEditor" timestamp="1637086201087">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
