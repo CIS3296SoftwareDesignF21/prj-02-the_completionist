@@ -14,7 +14,12 @@ public class Calendar {
             System.out.println("test added successfully");
         }
 
+        cal.addTask(new Task("go to grocery store", "11/1/2021", 2, "true"));
+        cal.addTask(new Task("go to the mall", "11/2/2021", 3, "true"));
+
         System.out.println(cal.nov[0].toString());
+        System.out.println("\n\n\n");
+        System.out.println(Arrays.toString(cal.readArray("11/01/2021")));
     }
     public Calendar(){
 
