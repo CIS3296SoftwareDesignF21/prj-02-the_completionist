@@ -149,6 +149,51 @@ public class Calendar {
         
     }
 
+    public Object[] readArray(String currentDate){
+
+        int date = dateFinder(currentDate);
+        String month = monthFinder(currentDate);
+        
+
+        if(month.equals("jan")){
+            return jan[date-1].toArray();
+        }
+        else if(month.equals("feb")){
+            return jan[date-1].toArray();
+        }
+        else if(month.equals("mar")){
+            return jan[date-1].toArray();
+        }
+        else if(month.equals("april")){
+            return jan[date-1].toArray();
+        }
+        else if(month.equals("may")){
+            return jan[date-1].toArray();
+        }
+        else if(month.equals("june")){
+            return jan[date-1].toArray();
+        }
+        else if(month.equals("jul")){
+            return jan[date-1].toArray();
+        }
+        else if(month.equals("aug")){
+            return jan[date-1].toArray();
+        }
+        else if(month.equals("sept")){
+            return jan[date-1].toArray();
+        }
+        else if(month.equals("oct")){
+            return jan[date-1].toArray();
+        }
+        else if(month.equals("nov")){
+            return jan[date-1].toArray();
+        }
+        else{
+            return dec[date-1].toArray();
+        }
+        
+    }
+
     //reads the saved tasks from the files and adds them to the array.
     public void readFiles(){
         String taskName, dueDate, priority, flag, month;
