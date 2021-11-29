@@ -6,7 +6,7 @@ public class Task {
     private int priority;
     private String tag;
 
-    public Task(String name, String date, int priority, String tag){
+    public Task(String name, String date, String priority, String tag){
         this.name = name;
         this.date = date;
         this.priority = priority;
@@ -29,11 +29,11 @@ public class Task {
         this.date = date;
     }
 
-    public int getPriority() {
+    public String getPriority() {
         return priority;
     }
 
-    public void setPriority(int priority) {
+    public void setPriority(String priority) {
         this.priority = priority;
     }
 
