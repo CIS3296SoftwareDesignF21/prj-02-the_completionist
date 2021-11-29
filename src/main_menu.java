@@ -122,6 +122,15 @@ public class main_menu extends Application  {
     }
 
     public static void main(String[] args) {
-        Application.launch(args);
+        //Application.launch(args);
+
+        Calendar cal = new Calendar();
+
+        if(cal.addTask(new Task("do Homework", "11/1/2021", 1, "true")) == -1){
+            System.out.println("adding task failed");
+        }
+        else{
+            System.out.println("test added successfully");
+        }
     }
 }

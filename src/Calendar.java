@@ -2,21 +2,59 @@ import java.io.*;
 import java.util.*;
 
 public class Calendar {
-    private List<List<Task>> jan, feb, mar, april, may, june, jul, aug, sept, oct, nov, dec;
+    private ArrayList<Task>[] jan, feb, mar, april, may, june, jul, aug, sept, oct, nov, dec;
 
+    public static void main(String[] args){
+      Calendar cal = new Calendar();
+
+        if(cal.addTask(new Task("do Homework", "11/10/2021", 1, "true")) == -1){
+            System.out.println("adding task failed");
+        }
+        else{
+            System.out.println("test added successfully");
+        }
+
+<<<<<<< HEAD
+        System.out.println(cal.nov[9].toString());
+=======
+        cal.addTask(new Task("go to grocery store", "11/1/2021", 2, "true"));
+        cal.addTask(new Task("go to the mall", "11/2/2021", 3, "true"));
+
+        System.out.println(cal.nov[0].toString());
+        System.out.println("\n\n\n");
+        System.out.println(Arrays.toString(cal.readArray("11/01/2021")));
+>>>>>>> 90993db45df5fdc1acfe7333db5f2fcbd7b73df0
+    }
     public Calendar(){
-        jan = new ArrayList<List<Task>>(30);
-        feb = new ArrayList<List<Task>>(29);
-        mar = new ArrayList<List<Task>>(31);
-        april = new ArrayList<List<Task>>(30);
-        may = new ArrayList<List<Task>>(31);
-        june = new ArrayList<List<Task>>(30);
-        jul = new ArrayList<List<Task>>(31);
-        aug = new ArrayList<List<Task>>(31);
-        sept = new ArrayList<List<Task>>(30);
-        oct = new ArrayList<List<Task>>(31);
-        nov = new ArrayList<List<Task>>(30);
-        dec = new ArrayList<List<Task>>(31); 
+
+        jan = new ArrayList[31];
+        feb = new ArrayList[31];
+        mar = new ArrayList[31];
+        april = new ArrayList[31];
+        may = new ArrayList[31];
+        june = new ArrayList[31];
+        jul = new ArrayList[31];
+        aug = new ArrayList[31];
+        sept = new ArrayList[31];
+        oct = new ArrayList[31];
+        nov = new ArrayList[31];
+        dec = new ArrayList[31];
+
+        for(int i = 0; i < 31; i++){
+            jan[i] = new ArrayList<Task>();
+            feb[i] = new ArrayList<Task>();
+            mar[i] = new ArrayList<Task>();
+            april[i] = new ArrayList<Task>();
+            may[i] = new ArrayList<Task>();
+            june[i] = new ArrayList<Task>();
+            jul[i] = new ArrayList<Task>();
+            aug[i] = new ArrayList<Task>();
+            sept[i] = new ArrayList<Task>();
+            oct[i] = new ArrayList<Task>();
+            nov[i] = new ArrayList<Task>();
+            dec[i] = new ArrayList<Task>();
+
+        }    
     }
 
 
@@ -28,40 +66,40 @@ public class Calendar {
         int date = dateFinder(newTask.getDate());
 
         if(month.equals("jan")){
-            jan.get(date).add(newTask);
+            jan[date-1].add(newTask);
         }
         else if(month.equals("feb")){
-            feb.get(date).add(newTask);
+            feb[date-1].add(newTask);
         }
         else if(month.equals("mar")){
-            mar.get(date).add(newTask);
+            mar[date-1].add(newTask);
         }
         else if(month.equals("april")){
-            april.get(date).add(newTask);
+            april[date-1].add(newTask);
         }
         else if(month.equals("may")){
-            may.get(date).add(newTask);
+            may[date-1].add(newTask);
         }
         else if(month.equals("june")){
-            june.get(date).add(newTask);
+            june[date-1].add(newTask);
         }
         else if(month.equals("jul")){
-            jul.get(date).add(newTask);
+            jul[date-1].add(newTask);
         }
         else if(month.equals("aug")){
-            aug.get(date).add(newTask);
+            aug[date-1].add(newTask);
         }
         else if(month.equals("sept")){
-            sept.get(date).add(newTask);
+            sept[date-1].add(newTask);
         }
         else if(month.equals("oct")){
-            oct.get(date).add(newTask);
+            oct[date-1].add(newTask);
         }
         else if(month.equals("nov")){
-            nov.get(date).add(newTask);
+            nov[date-1].add(newTask);
         }
         else if(month.equals("dec")){
-            dec.get(date).add(newTask);
+            dec[date-1].add(newTask);
         }
         else{
             return -1;
@@ -86,24 +124,83 @@ public class Calendar {
     }
 
     //saves the task to correct month text file
-    private void writeToFile(String taskName, String dueDate, String priority, String flag){
+    private void writeToFile(){
 
-        String month = monthFinder(dueDate);
+        //month
+        for(int i =1; i <= 12; i++){
+            String month = monthToString(i);
+            if(month.equals("jan")){
 
-        try {
-            FileWriter myWriter = new FileWriter( month + ".txt", true);
-            myWriter.write("\n{\nName: " + taskName + "\n");
-            myWriter.write("Date: " + dueDate + "\n");
-            myWriter.write("Priority: " + priority + "\n");
-            myWriter.write("Flag: " + flag + "\n");
-            myWriter.write("}\n");
-            myWriter.close();
+                try{
+                    FileWriter myWriter = new FileWriter( month + ".txt", true);
+                    //day
+                    for(int j = 0; j < jan.length; j++){
+                        for(int k = 0; k < jan[j].size(); k++){
+                            String taskName = jan[j].get(k).getName();
+                            String dueDate = jan[j].get(k).getDate();
+                            int priority = jan[j].get(k).getPriority();
+                            String tag = jan[j].get(k).getTag();
+                            myWriter.write("\n{\nName: " + taskName + "\n");
+                            myWriter.write("Date: " + dueDate + "\n");
+                            myWriter.write("Priority: " + priority + "\n");
+                            myWriter.write("Tag: " + tag + "\n");
+                            myWriter.write("}\n");
+                            myWriter.close();
+    
+                        }
+                    }
+                } catch (IOException e) {
+                    System.out.println("Error writing to file");
+                    e.printStackTrace();
+                }
+            }
+        }     
+        
+    }
 
-        } catch (IOException e) {
-            System.out.println("Error writing to file");
-            e.printStackTrace();
+    public ArrayList<Task> readArray(String currentDate){
+
+        int date = dateFinder(currentDate);
+        String month = monthFinder(currentDate);
+        
+
+        if(month.equals("jan")){
+            return jan[date-1];
         }
-
+        else if(month.equals("feb")){
+            return feb[date-1];
+        }
+        else if(month.equals("mar")){
+            return mar[date-1];
+        }
+        else if(month.equals("april")){
+            return april[date-1];
+        }
+        else if(month.equals("may")){
+            return may[date-1];
+        }
+        else if(month.equals("june")){
+            return june[date-1];
+        }
+        else if(month.equals("jul")){
+            return jul[date-1];
+        }
+        else if(month.equals("aug")){
+            return aug[date-1];
+        }
+        else if(month.equals("sept")){
+            return sept[date-1];
+        }
+        else if(month.equals("oct")){
+            return oct[date-1];
+        }
+        else if(month.equals("nov")){
+            return nov[date-1];
+        }
+        else{
+            return dec[date-1];
+        }
+        
     }
 
     //reads the saved tasks from the files and adds them to the array.
