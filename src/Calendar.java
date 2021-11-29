@@ -159,6 +159,285 @@ public class Calendar {
                     e.printStackTrace();
                 }
             }
+            else if(month.equals("feb")){
+
+                try{
+                    FileWriter myWriter = new FileWriter( month + ".txt", true);
+                    //day
+                    for(int j = 0; j < feb.length; j++){
+                        for(int k = 0; k < feb[j].size(); k++){
+                            String taskName = feb[j].get(k).getName();
+                            String dueDate = feb[j].get(k).getDate();
+                            String priority = feb[j].get(k).getPriority();
+                            String tag = feb[j].get(k).getTag();
+                            myWriter.write("\n{\nName: " + taskName + "\n");
+                            myWriter.write("Date: " + dueDate + "\n");
+                            myWriter.write("Priority: " + priority + "\n");
+                            myWriter.write("Tag: " + tag + "\n");
+                            myWriter.write("}\n");
+                            myWriter.close();
+    
+                        }
+                    }
+                } catch (IOException e) {
+                    System.out.println("Error writing to file");
+                    e.printStackTrace();
+                }
+            }
+
+            else if(month.equals("mar")){
+
+                try{
+                    FileWriter myWriter = new FileWriter( month + ".txt", true);
+                    //day
+                    for(int j = 0; j < mar.length; j++){
+                        for(int k = 0; k < mar[j].size(); k++){
+                            String taskName = mar[j].get(k).getName();
+                            String dueDate = mar[j].get(k).getDate();
+                            String priority = mar[j].get(k).getPriority();
+                            String tag = mar[j].get(k).getTag();
+                            myWriter.write("\n{\nName: " + taskName + "\n");
+                            myWriter.write("Date: " + dueDate + "\n");
+                            myWriter.write("Priority: " + priority + "\n");
+                            myWriter.write("Tag: " + tag + "\n");
+                            myWriter.write("}\n");
+                            myWriter.close();
+    
+                        }
+                    }
+                } catch (IOException e) {
+                    System.out.println("Error writing to file");
+                    e.printStackTrace();
+                }
+            }
+
+            else if(month.equals("april")){
+
+                try{
+                    FileWriter myWriter = new FileWriter( month + ".txt", true);
+                    //day
+                    for(int j = 0; j < april.length; j++){
+                        for(int k = 0; k < april[j].size(); k++){
+                            String taskName = april[j].get(k).getName();
+                            String dueDate = april[j].get(k).getDate();
+                            String priority = april[j].get(k).getPriority();
+                            String tag = april[j].get(k).getTag();
+                            myWriter.write("\n{\nName: " + taskName + "\n");
+                            myWriter.write("Date: " + dueDate + "\n");
+                            myWriter.write("Priority: " + priority + "\n");
+                            myWriter.write("Tag: " + tag + "\n");
+                            myWriter.write("}\n");
+                            myWriter.close();
+    
+                        }
+                    }
+                } catch (IOException e) {
+                    System.out.println("Error writing to file");
+                    e.printStackTrace();
+                }
+            }
+            else if(month.equals("may")){
+
+                try{
+                    FileWriter myWriter = new FileWriter( month + ".txt", true);
+                    //day
+                    for(int j = 0; j < may.length; j++){
+                        for(int k = 0; k < may[j].size(); k++){
+                            String taskName = may[j].get(k).getName();
+                            String dueDate = may[j].get(k).getDate();
+                            String priority = may[j].get(k).getPriority();
+                            String tag = may[j].get(k).getTag();
+                            myWriter.write("\n{\nName: " + taskName + "\n");
+                            myWriter.write("Date: " + dueDate + "\n");
+                            myWriter.write("Priority: " + priority + "\n");
+                            myWriter.write("Tag: " + tag + "\n");
+                            myWriter.write("}\n");
+                            myWriter.close();
+    
+                        }
+                    }
+                } catch (IOException e) {
+                    System.out.println("Error writing to file");
+                    e.printStackTrace();
+                }
+            }
+            else if(month.equals("june")){
+
+                try{
+                    FileWriter myWriter = new FileWriter( month + ".txt", true);
+                    //day
+                    for(int j = 0; j < june.length; j++){
+                        for(int k = 0; k < june[j].size(); k++){
+                            String taskName = june[j].get(k).getName();
+                            String dueDate = june[j].get(k).getDate();
+                            String priority = june[j].get(k).getPriority();
+                            String tag = feb[j].get(k).getTag();
+                            myWriter.write("\n{\nName: " + taskName + "\n");
+                            myWriter.write("Date: " + dueDate + "\n");
+                            myWriter.write("Priority: " + priority + "\n");
+                            myWriter.write("Tag: " + tag + "\n");
+                            myWriter.write("}\n");
+                            myWriter.close();
+    
+                        }
+                    }
+                } catch (IOException e) {
+                    System.out.println("Error writing to file");
+                    e.printStackTrace();
+                }
+            }
+            else if(month.equals("jul")){
+
+                try{
+                    FileWriter myWriter = new FileWriter( month + ".txt", true);
+                    //day
+                    for(int j = 0; j < jul.length; j++){
+                        for(int k = 0; k < jul[j].size(); k++){
+                            String taskName = jul[j].get(k).getName();
+                            String dueDate = jul[j].get(k).getDate();
+                            String priority = jul[j].get(k).getPriority();
+                            String tag = jul[j].get(k).getTag();
+                            myWriter.write("\n{\nName: " + taskName + "\n");
+                            myWriter.write("Date: " + dueDate + "\n");
+                            myWriter.write("Priority: " + priority + "\n");
+                            myWriter.write("Tag: " + tag + "\n");
+                            myWriter.write("}\n");
+                            myWriter.close();
+    
+                        }
+                    }
+                } catch (IOException e) {
+                    System.out.println("Error writing to file");
+                    e.printStackTrace();
+                }
+            }
+            else if(month.equals("aug")){
+
+                try{
+                    FileWriter myWriter = new FileWriter( month + ".txt", true);
+                    //day
+                    for(int j = 0; j < aug.length; j++){
+                        for(int k = 0; k < aug[j].size(); k++){
+                            String taskName = aug[j].get(k).getName();
+                            String dueDate = aug[j].get(k).getDate();
+                            String priority = aug[j].get(k).getPriority();
+                            String tag = aug[j].get(k).getTag();
+                            myWriter.write("\n{\nName: " + taskName + "\n");
+                            myWriter.write("Date: " + dueDate + "\n");
+                            myWriter.write("Priority: " + priority + "\n");
+                            myWriter.write("Tag: " + tag + "\n");
+                            myWriter.write("}\n");
+                            myWriter.close();
+    
+                        }
+                    }
+                } catch (IOException e) {
+                    System.out.println("Error writing to file");
+                    e.printStackTrace();
+                }
+            }
+            else if(month.equals("sept")){
+
+                try{
+                    FileWriter myWriter = new FileWriter( month + ".txt", true);
+                    //day
+                    for(int j = 0; j < sept.length; j++){
+                        for(int k = 0; k < sept[j].size(); k++){
+                            String taskName = sept[j].get(k).getName();
+                            String dueDate = sept[j].get(k).getDate();
+                            String priority = sept[j].get(k).getPriority();
+                            String tag = feb[j].get(k).getTag();
+                            myWriter.write("\n{\nName: " + taskName + "\n");
+                            myWriter.write("Date: " + dueDate + "\n");
+                            myWriter.write("Priority: " + priority + "\n");
+                            myWriter.write("Tag: " + tag + "\n");
+                            myWriter.write("}\n");
+                            myWriter.close();
+    
+                        }
+                    }
+                } catch (IOException e) {
+                    System.out.println("Error writing to file");
+                    e.printStackTrace();
+                }
+            }
+            else if(month.equals("oct")){
+
+                try{
+                    FileWriter myWriter = new FileWriter( month + ".txt", true);
+                    //day
+                    for(int j = 0; j < oct.length; j++){
+                        for(int k = 0; k < oct[j].size(); k++){
+                            String taskName = oct[j].get(k).getName();
+                            String dueDate = oct[j].get(k).getDate();
+                            String priority = oct[j].get(k).getPriority();
+                            String tag = oct[j].get(k).getTag();
+                            myWriter.write("\n{\nName: " + taskName + "\n");
+                            myWriter.write("Date: " + dueDate + "\n");
+                            myWriter.write("Priority: " + priority + "\n");
+                            myWriter.write("Tag: " + tag + "\n");
+                            myWriter.write("}\n");
+                            myWriter.close();
+    
+                        }
+                    }
+                } catch (IOException e) {
+                    System.out.println("Error writing to file");
+                    e.printStackTrace();
+                }
+            }
+            else if(month.equals("nov")){
+
+                try{
+                    FileWriter myWriter = new FileWriter( month + ".txt", true);
+                    //day
+                    for(int j = 0; j < nov.length; j++){
+                        for(int k = 0; k < nov[j].size(); k++){
+                            String taskName = nov[j].get(k).getName();
+                            String dueDate = nov[j].get(k).getDate();
+                            String priority = nov[j].get(k).getPriority();
+                            String tag = nov[j].get(k).getTag();
+                            myWriter.write("\n{\nName: " + taskName + "\n");
+                            myWriter.write("Date: " + dueDate + "\n");
+                            myWriter.write("Priority: " + priority + "\n");
+                            myWriter.write("Tag: " + tag + "\n");
+                            myWriter.write("}\n");
+                            myWriter.close();
+    
+                        }
+                    }
+                } catch (IOException e) {
+                    System.out.println("Error writing to file");
+                    e.printStackTrace();
+                }
+            }
+
+            else if(month.equals("dec")){
+
+                try{
+                    FileWriter myWriter = new FileWriter( month + ".txt", true);
+                    //day
+                    for(int j = 0; j < dec.length; j++){
+                        for(int k = 0; k < dec[j].size(); k++){
+                            String taskName = dec[j].get(k).getName();
+                            String dueDate = dec[j].get(k).getDate();
+                            String priority = dec[j].get(k).getPriority();
+                            String tag = dec[j].get(k).getTag();
+                            myWriter.write("\n{\nName: " + taskName + "\n");
+                            myWriter.write("Date: " + dueDate + "\n");
+                            myWriter.write("Priority: " + priority + "\n");
+                            myWriter.write("Tag: " + tag + "\n");
+                            myWriter.write("}\n");
+                            myWriter.close();
+    
+                        }
+                    }
+                } catch (IOException e) {
+                    System.out.println("Error writing to file");
+                    e.printStackTrace();
+                }
+            }
+
         }     
         
     }
@@ -260,6 +539,8 @@ public class Calendar {
                 System.out.println("Error");
                 e.printStackTrace();
             }
+            
+            
         }
     }
     
