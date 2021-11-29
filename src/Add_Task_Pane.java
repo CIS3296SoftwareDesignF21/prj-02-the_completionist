@@ -52,7 +52,7 @@ public class Add_Task_Pane extends Application {
             public void handle(ActionEvent event) {
 
                 Calendar cal = new Calendar();
-                Task newTask = new Task(taskNameField.getText(), date.getEditor().getText(), Integer.parseInt(priorityField.getText()) , "True");
+                Task newTask = new Task(taskNameField.getText(), date.getEditor().getText(), priorityField.getText() , "True");
                 
                 if(cal.addTask(newTask) == 1){
                     System.out.println("Task Added");
