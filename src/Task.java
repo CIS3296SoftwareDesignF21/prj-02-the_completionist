@@ -3,7 +3,7 @@ import java.util.Calendar;
 public class Task {
     private String name;
     private String date;
-    private int priority;
+    private String priority;
     private String tag;
 
     public Task(String name, String date, String priority, String tag){
