@@ -7,23 +7,19 @@ public class Calendar {
     public static void main(String[] args){
       Calendar cal = new Calendar();
 
-        if(cal.addTask(new Task("do Homework", "11/10/2021", 1, "true")) == -1){
+        if(cal.addTask(new Task("do Homework", "11/10/2021", "high", "true")) == -1){
             System.out.println("adding task failed");
         }
         else{
             System.out.println("test added successfully");
         }
 
-<<<<<<< HEAD
-        System.out.println(cal.nov[9].toString());
-=======
-        cal.addTask(new Task("go to grocery store", "11/1/2021", 2, "true"));
-        cal.addTask(new Task("go to the mall", "11/2/2021", 3, "true"));
+        cal.addTask(new Task("go to grocery store", "11/1/2021", "low", "true"));
+        cal.addTask(new Task("go to the mall", "11/2/2021", "medium", "true"));
 
         System.out.println(cal.nov[0].toString());
         System.out.println("\n\n\n");
-        System.out.println(Arrays.toString(cal.readArray("11/01/2021")));
->>>>>>> 90993db45df5fdc1acfe7333db5f2fcbd7b73df0
+
     }
     public Calendar(){
 
@@ -138,7 +134,7 @@ public class Calendar {
                         for(int k = 0; k < jan[j].size(); k++){
                             String taskName = jan[j].get(k).getName();
                             String dueDate = jan[j].get(k).getDate();
-                            int priority = jan[j].get(k).getPriority();
+                            String priority = jan[j].get(k).getPriority();
                             String tag = jan[j].get(k).getTag();
                             myWriter.write("\n{\nName: " + taskName + "\n");
                             myWriter.write("Date: " + dueDate + "\n");
@@ -247,7 +243,7 @@ public class Calendar {
                     }
                 }
                 myScanner.close();
-                Task newTask = new Task(taskName, dueDate, Integer.parseInt(priority), flag);
+                Task newTask = new Task(taskName, dueDate, priority, flag);
                 addTask(newTask);
                 
             }
