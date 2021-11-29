@@ -13,9 +13,9 @@
         },
         {
             "type": "java",
-            "name": "Launch addTaskFrame",
+            "name": "Launch Add_Task_Pane",
             "request": "launch",
-            "mainClass": "addTaskFrame",
+            "mainClass": "Add_Task_Pane",
             "projectName": "prj-02-the_completionist_c3119410"
         },
         {

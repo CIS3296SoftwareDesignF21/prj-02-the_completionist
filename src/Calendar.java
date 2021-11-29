@@ -63,8 +63,139 @@ public class Calendar {
         }
         return instance;
     }
-    //adds the task to the arraylist
 
+    public void deleteTask(Task task){
+
+        String dueDate = task.getDate();
+
+        String month = monthFinder(dueDate);
+        int date = dateFinder(dueDate);
+
+        if(month.equals("jan")){
+            for(int i =0; i < jan.length; i++){
+                if(task.getName().equals(jan[date-1].get(i).getName())){
+                    jan[date-1].get(i).setComplete(true);
+
+                }
+                else{
+                    continue;
+                }
+            }
+        }
+        else if(month.equals("feb")){
+            for(int i =0; i < feb.length; i++){
+                if(task.getName().equals(feb[date-1].get(i).getName())){
+                    feb[date-1].get(i).setComplete(true);
+                }
+                else{
+                    continue;
+                }
+            }
+        }
+        else if(month.equals("mar")){
+            for(int i =0; i < mar.length; i++){
+                if(task.getName().equals(mar[date-1].get(i).getName())){
+                    mar[date-1].get(i).setComplete(true);
+                }
+                else{
+                    continue;
+                }
+            }
+        }
+        else if(month.equals("april")){
+            for(int i =0; i < april.length; i++){
+                if(task.getName().equals(april[date-1].get(i).getName())){
+                    april[date-1].get(i).setComplete(true);
+                }
+                else{
+                    continue;
+                }
+            }
+        }
+        else if(month.equals("may")){
+            for(int i =0; i < may.length; i++){
+                if(task.getName().equals(may[date-1].get(i).getName())){
+                    may[date-1].get(i).setComplete(true);
+                }
+                else{
+                    continue;
+                }
+            }
+        }
+        else if(month.equals("june")){
+            for(int i =0; i < june.length; i++){
+                if(task.getName().equals(june[date-1].get(i).getName())){
+                    june[date-1].get(i).setComplete(true);
+                }
+                else{
+                    continue;
+                }
+            }
+        }
+        else if(month.equals("jul")){
+            for(int i =0; i < jul.length; i++){
+                if(task.getName().equals(jul[date-1].get(i).getName())){
+                    jul[date-1].get(i).setComplete(true);
+                }
+                else{
+                    continue;
+                }
+            }
+        }
+        else if(month.equals("aug")){
+            for(int i =0; i < aug.length; i++){
+                if(task.getName().equals(aug[date-1].get(i).getName())){
+                    aug[date-1].get(i).setComplete(true);
+                }
+                else{
+                    continue;
+                }
+            }
+        }
+        else if(month.equals("sept")){
+            for(int i =0; i < sept.length; i++){
+                if(task.getName().equals(sept[date-1].get(i).getName())){
+                    sept[date-1].get(i).setComplete(true);
+                }
+                else{
+                    continue;
+                }
+            }
+        }
+        else if(month.equals("oct")){
+            for(int i =0; i < oct.length; i++){
+                if(task.getName().equals(oct[date-1].get(i).getName())){
+                    oct[date-1].get(i).setComplete(true);
+                }
+                else{
+                    continue;
+                }
+            }
+        }
+        else if(month.equals("nov")){
+            for(int i =0; i < nov.length; i++){
+                if(task.getName().equals(nov[date-1].get(i).getName())){
+                    nov[date-1].get(i).setComplete(true);
+                }
+                else{
+                    continue;
+                }
+            }
+        }
+        else if(month.equals("dec")){
+            for(int i =0; i < dec.length; i++){
+                if(task.getName().equals(dec[date-1].get(i).getName())){
+                    dec[date-1].get(i).setComplete(true);
+                }
+                else{
+                    continue;
+                }
+            }
+        }
+
+    }
+
+    //adds the task to the arraylist
     public int addTask(Task newTask){
 
         String month = monthFinder(newTask.getDate());
@@ -141,6 +272,10 @@ public class Calendar {
                     //day
                     for(int j = 0; j < jan.length; j++){
                         for(int k = 0; k < jan[j].size(); k++){
+
+                            if(jan[j].get(k).getComplete()){
+                                continue;
+                            }
                             String taskName = jan[j].get(k).getName();
                             String dueDate = jan[j].get(k).getDate();
                             String priority = jan[j].get(k).getPriority();
@@ -166,6 +301,9 @@ public class Calendar {
                     //day
                     for(int j = 0; j < feb.length; j++){
                         for(int k = 0; k < feb[j].size(); k++){
+                            if(feb[j].get(k).getComplete()){
+                                continue;
+                            }
                             String taskName = feb[j].get(k).getName();
                             String dueDate = feb[j].get(k).getDate();
                             String priority = feb[j].get(k).getPriority();
@@ -192,6 +330,9 @@ public class Calendar {
                     //day
                     for(int j = 0; j < mar.length; j++){
                         for(int k = 0; k < mar[j].size(); k++){
+                            if(mar[j].get(k).getComplete()){
+                                continue;
+                            }
                             String taskName = mar[j].get(k).getName();
                             String dueDate = mar[j].get(k).getDate();
                             String priority = mar[j].get(k).getPriority();
@@ -218,6 +359,9 @@ public class Calendar {
                     //day
                     for(int j = 0; j < april.length; j++){
                         for(int k = 0; k < april[j].size(); k++){
+                            if(april[j].get(k).getComplete()){
+                                continue;
+                            }
                             String taskName = april[j].get(k).getName();
                             String dueDate = april[j].get(k).getDate();
                             String priority = april[j].get(k).getPriority();
@@ -243,6 +387,9 @@ public class Calendar {
                     //day
                     for(int j = 0; j < may.length; j++){
                         for(int k = 0; k < may[j].size(); k++){
+                            if(may[j].get(k).getComplete()){
+                                continue;
+                            }
                             String taskName = may[j].get(k).getName();
                             String dueDate = may[j].get(k).getDate();
                             String priority = may[j].get(k).getPriority();
@@ -268,6 +415,9 @@ public class Calendar {
                     //day
                     for(int j = 0; j < june.length; j++){
                         for(int k = 0; k < june[j].size(); k++){
+                            if(june[j].get(k).getComplete()){
+                                continue;
+                            }
                             String taskName = june[j].get(k).getName();
                             String dueDate = june[j].get(k).getDate();
                             String priority = june[j].get(k).getPriority();
@@ -293,6 +443,9 @@ public class Calendar {
                     //day
                     for(int j = 0; j < jul.length; j++){
                         for(int k = 0; k < jul[j].size(); k++){
+                            if(jul[j].get(k).getComplete()){
+                                continue;
+                            }
                             String taskName = jul[j].get(k).getName();
                             String dueDate = jul[j].get(k).getDate();
                             String priority = jul[j].get(k).getPriority();
@@ -318,6 +471,9 @@ public class Calendar {
                     //day
                     for(int j = 0; j < aug.length; j++){
                         for(int k = 0; k < aug[j].size(); k++){
+                            if(aug[j].get(k).getComplete()){
+                                continue;
+                            }
                             String taskName = aug[j].get(k).getName();
                             String dueDate = aug[j].get(k).getDate();
                             String priority = aug[j].get(k).getPriority();
@@ -343,6 +499,9 @@ public class Calendar {
                     //day
                     for(int j = 0; j < sept.length; j++){
                         for(int k = 0; k < sept[j].size(); k++){
+                            if(sept[j].get(k).getComplete()){
+                                continue;
+                            }
                             String taskName = sept[j].get(k).getName();
                             String dueDate = sept[j].get(k).getDate();
                             String priority = sept[j].get(k).getPriority();
@@ -368,6 +527,9 @@ public class Calendar {
                     //day
                     for(int j = 0; j < oct.length; j++){
                         for(int k = 0; k < oct[j].size(); k++){
+                            if(oct[j].get(k).getComplete()){
+                                continue;
+                            }
                             String taskName = oct[j].get(k).getName();
                             String dueDate = oct[j].get(k).getDate();
                             String priority = oct[j].get(k).getPriority();
@@ -393,6 +555,9 @@ public class Calendar {
                     //day
                     for(int j = 0; j < nov.length; j++){
                         for(int k = 0; k < nov[j].size(); k++){
+                            if(nov[j].get(k).getComplete()){
+                                continue;
+                            }
                             String taskName = nov[j].get(k).getName();
                             String dueDate = nov[j].get(k).getDate();
                             String priority = nov[j].get(k).getPriority();
@@ -419,6 +584,9 @@ public class Calendar {
                     //day
                     for(int j = 0; j < dec.length; j++){
                         for(int k = 0; k < dec[j].size(); k++){
+                            if(dec[j].get(k).getComplete()){
+                                continue;
+                            }
                             String taskName = dec[j].get(k).getName();
                             String dueDate = dec[j].get(k).getDate();
                             String priority = dec[j].get(k).getPriority();

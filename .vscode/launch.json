@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch guiMain",
+            "request": "launch",
+            "mainClass": "guiMain",
+            "projectName": "prj-02-the_completionist_c3119410"
+        },
+        {
+            "type": "java",
             "name": "Launch Calendar",
             "request": "launch",
             "mainClass": "Calendar",
