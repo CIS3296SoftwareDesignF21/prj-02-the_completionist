@@ -3,25 +3,28 @@ import java.util.*;
 
 public class Calendar {
     private ArrayList<Task>[] jan, feb, mar, april, may, june, jul, aug, sept, oct, nov, dec;
+    private static Calendar instance = null;
 
-    public static void main(String[] args){
-      Calendar cal = new Calendar();
+    // public static void main(String[] args){
+    //   Calendar cal = new Calendar();
 
-        if(cal.addTask(new Task("do Homework", "11/10/2021", "high", "true")) == -1){
-            System.out.println("adding task failed");
-        }
-        else{
-            System.out.println("test added successfully");
-        }
+    //     if(cal.addTask(new Task("do Homework", "11/10/2021", "high", "true")) == -1){
+    //         System.out.println("adding task failed");
+    //     }
+    //     else{
+    //         System.out.println("test added successfully");
+    //     }
 
-        cal.addTask(new Task("go to grocery store", "11/1/2021", "low", "true"));
-        cal.addTask(new Task("go to the mall", "11/2/2021", "medium", "true"));
+    //     cal.addTask(new Task("go to grocery store", "11/1/2021", "low", "true"));
+    //     cal.addTask(new Task("go to the mall", "11/2/2021", "medium", "true"));
 
-        System.out.println(cal.nov[0].toString());
-        System.out.println("\n\n\n");
+    //     System.out.println(cal.nov[0].toString());
+    //     System.out.println("\n\n\n");
 
-    }
-    public Calendar(){
+    // }
+
+    //singleton
+    private Calendar(){
 
         jan = new ArrayList[31];
         feb = new ArrayList[31];
@@ -50,10 +53,16 @@ public class Calendar {
             nov[i] = new ArrayList<Task>();
             dec[i] = new ArrayList<Task>();
 
-        }    
+        }
+            
     }
 
-
+    public static Calendar getInstance(){
+        if(instance == null){
+            instance = new Calendar();
+        }
+        return instance;
+    }
     //adds the task to the arraylist
 
     public int addTask(Task newTask){
