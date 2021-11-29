@@ -194,7 +194,7 @@ public class Pomodoro_Timer_Pane extends Application {
     }
 
     void playSound() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
-        File f = new File("../demo/src/main/resources/soundeffects/mixkit-happy-bells-notification-937.wav");
+        File f = new File("../prj-02-the_completionist/mixkit-happy-bells-notification-937.wav");
         AudioInputStream audioIn = AudioSystem.getAudioInputStream(f.toURI().toURL());
         Clip clip = AudioSystem.getClip();
         clip.open(audioIn);
