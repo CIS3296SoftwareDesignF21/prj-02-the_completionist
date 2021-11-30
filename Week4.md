@@ -17,9 +17,12 @@
 
 ## Andrew:
 * Finalized Calendar GUI
+* Updated UML Diagram
 
 ## Matt:
+* Created motivational quotes feature
 
 ## Tuan:
 * Helped finalize the Home Page Pane
 * Added functionality to delete tasks
+* Worked on interactivity between calendar back-end and front-end
