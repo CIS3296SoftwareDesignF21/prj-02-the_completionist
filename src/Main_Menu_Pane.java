@@ -17,19 +17,20 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
 import java.util.TimeZone;
 
 public class Main_Menu_Pane extends Application  {
 
     Calendar cal = Calendar.getInstance();
-
-    //Event myEvent = new MyEvent();
-
 
     static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy");
     static LocalDateTime now = LocalDateTime.now();
@@ -37,11 +38,13 @@ public class Main_Menu_Pane extends Application  {
     ArrayList<Task> display = cal.readArray(dtf.format(now));
     public ArrayList<Task> todayList;
 
-    public static ArrayList<Task> testarr = new ArrayList<Task>();
-    public static ArrayList<Task> testarr2 = new ArrayList<Task>();
     public static ArrayList<Task> sevenDays = new ArrayList<Task>();
 
     int task = cal.addTask(new Task("Do homework", "11/29/21", "High", "School"));
+    int task2 = cal.addTask(new Task("walk dog", "11/22/21", "Medium", "Personal"));
+    int task3 = cal.addTask(new Task("Workout", "11/23/21", "Medium", "Personal"));
+    int task4 = cal.addTask(new Task("Apply to Jobs", "11/24/21", "High", "Work"));
+    int task5 = cal.addTask(new Task("Email Profesor", "11/26/21", "Low", "School"));
 
     private TableView<Task> dayTable = new TableView();
     public ObservableList<Task> dayData =
@@ -51,10 +54,10 @@ public class Main_Menu_Pane extends Application  {
             );
 
     private TableView<Task> weekTable = new TableView();
-    public final ObservableList<Task> weekData =
+    public ObservableList<Task> weekData =
 
             FXCollections.observableArrayList(
-                    sevenDays
+                    sevenDays = ret_sevenDays()
             );
 
     public static int parseDay(){
@@ -70,55 +73,17 @@ public class Main_Menu_Pane extends Application  {
     }
     
     public static int parseMonth(){
+
+        String[] stringArr;
+        int month;
+
         int[] dayarr = new int[3];
         String date = dtf.format(now);
-        String[] stringarr = date.split("/");
-        for(int k = 0; k < dayarr.length; k++){
-            dayarr[k] = Integer.valueOf(stringarr[k]);
-            System.out.println(dayarr[k]);
-        }
-        int month = dayarr[0];
-        //String month_name = "";
-        /*
-        switch(month){
-            case 1:
-                month_name += "jan";
-                break;
-            case 2:
-                month_name += "feb";
-                break;
-            case 3:
-                month_name += "mar";
-                break;
-            case 4:
-                month_name += "april";
-                break;
-            case 5:
-                month_name += "may";
-                break;
-            case 6:
-                month_name += "june";
-                break;
-            case 7:
-                month_name += "jul";
-                break;
-            case 8:
-                month_name += "aug";
-                break;
-            case 9:
-                month_name += "sept";
-                break;
-            case 10:
-                month_name += "oct";
-                break;
-            case 11:
-                month_name += "nov";
-                break;
-            case 12:
-                month_name += "dec";
-                break;
-        }
-        */
+
+        stringArr = date.split("/");
+
+        month = Integer.parseInt(stringArr[0]);
+
         return month;
     }
 
@@ -140,7 +105,7 @@ public class Main_Menu_Pane extends Application  {
     
     public static String quote() throws FileNotFoundException {
         String quote = "";
-        File  quote_file = new File("../demo/src/main/resources/inspirational_quotes.txt");
+        File quote_file = new File("../prj_02_the_completionist/inspirational_quotes.txt");
         Scanner in = new Scanner(quote_file);
         Random rand = new Random();
         int random_int = rand.nextInt(46 - 1) + 1;
@@ -153,25 +118,72 @@ public class Main_Menu_Pane extends Application  {
         return quote;
     }
 
-    public static void main(String[] args) {
-        testarr.add(new Task("Do homework", "11/29/21", "High", "School"));
-        testarr.add(new Task("Walk dog", "11/29/21", "medium", "personal"));
-        testarr.add(new Task("eat food", "11/30/21", "low", "personal"));
-        testarr.add(new Task("eat food", "11/31/21", "low", "personal"));
-        testarr.add(new Task("eat food", "12/01/21", "low", "personal"));
+    public ArrayList<Task> ret_sevenDays(){
+        ArrayList<Task> ret = new ArrayList<Task>();
+        int day = parseDay() + 1;
+        String day_string = "";
+        if(day < 10){
+            day_string = "0" + String.valueOf(day);
+        }
+        else{
+            day_string = String.valueOf(day);
+        }
 
-        int day = parseDay();
+        int month = parseMonth();
+        String month_string = "";
+        if(month < 10){
+            month_string = "0" + String.valueOf(month);
+        }
+        else{
+            month_string = String.valueOf(month);
+        }
+
+        int year = parseYear();
+        ArrayList<Task> temp = new ArrayList<Task>();
         int i = 0;
         while(i < 7){
             if(day > 32){
                 break;
             }
             else{
-                sevenDays.add(testarr.get(i));
+                String date = month_string + "/" + day_string + "/" + String.valueOf(year);
+                temp = cal.readArray(date);
+                for(int j = 0; j < temp.size(); j++){
+                    ret.add(temp.get(j));
+                }
             }
             i++;
             day++;
+            if(day < 10){
+                day_string = "0" + String.valueOf(day);
+            }
+            else{
+                day_string = String.valueOf(day);
+            }
+
         }
+        return ret;
+    }
+
+    public static void main(String[] args) {
+//        testarr.add(new Task("Do homework", "11/29/21", "High", "School"));
+//        testarr.add(new Task("Walk dog", "11/29/21", "medium", "personal"));
+//        testarr.add(new Task("eat food", "11/30/21", "low", "personal"));
+//        testarr.add(new Task("eat food", "11/31/21", "low", "personal"));
+//        testarr.add(new Task("eat food", "12/01/21", "low", "personal"));
+//
+//        int day = parseDay();
+//        int i = 0;
+//        while(i < 7){
+//            if(day > 32){
+//                break;
+//            }
+//            else{
+//                sevenDays.add(testarr.get(i));
+//            }
+//            i++;
+//            day++;
+//        }
 
         launch(args);
 
@@ -179,7 +191,7 @@ public class Main_Menu_Pane extends Application  {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-//        Calendar cal = new Calendar();
+       Calendar actualCal = new Calendar();
         Scene scene = new Scene(new Group());
 
         primaryStage.setTitle("Home Menu");
@@ -254,10 +266,11 @@ public class Main_Menu_Pane extends Application  {
         });
         */
 
-        Button button2 = new Button("Add Task");
-        Add_Task_Pane add = new Add_Task_Pane();
+        Button button2 = new Button("Save Tasks");
+        //Add_Task_Pane add = new Add_Task_Pane();
         button2.setOnAction(e -> {
-            add.start(primaryStage);
+            //add.start(primaryStage);
+            actualCal.writeToFile();
         });
 
         Button button3 = new Button("Pomodoro Timer");
@@ -329,49 +342,17 @@ public class Main_Menu_Pane extends Application  {
                 else{
                     System.out.println("Task did not add");
                 }
-                todayList = cal.readArray(dtf.format(now));
+                //todayList = cal.readArray(dtf.format(now));
                 dayData = FXCollections.observableArrayList(
                         todayList = cal.readArray(dtf.format(now))
                 );
-                
-                                int day = parseDay() + 1;
-                String day_string = "";
-                if(day < 10){
-                    day_string = "0" + String.valueOf(day);
-                }
-                else{
-                    day_string = String.valueOf(day);
-                }
 
-                int month = parseMonth();
-                String month_string = "";
-                if(month < 10){
-                    month_string = "0" + String.valueOf(day);
-                }
-                else{
-                    month_string = String.valueOf(day);
-                }
-
-                int year = parseYear();
-                ArrayList<Task> temp = new ArrayList<Task>();
-                int i = 0;
-                while(i < 7){
-                    if(day > 32){
-                        break;
-                    }
-                    else{
-                        String date = month_string + "/" + day_string + "/" + String.valueOf(year);
-                        temp = cal.readArray(date);
-                        for(int j = 0; j < temp.size(); j++){
-                            sevenDays.add(temp.get(j));
-                        }
-                    }
-                    i++;
-                    day++;
-                }
+                sevenDays = ret_sevenDays();
                 weekData = FXCollections.observableArrayList(sevenDays);
 
                 dayTable.setItems(dayData);
+                weekTable.setItems(weekData);
+
                 taskNameField.clear();
                 priorityField.clear();
                 taskNameField.clear();
