@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Calendar {
     private ArrayList<Task>[] jan, feb, mar, april, may, june, jul, aug, sept, oct, nov, dec;
-    private static Calendar instance = null;
+    private static Calendar instance = new Calendar();
 
     // public static void main(String[] args){
     //   Calendar cal = new Calendar();
@@ -58,9 +58,9 @@ public class Calendar {
     }
 
     public static Calendar getInstance(){
-        if(instance == null){
-            instance = new Calendar();
-        }
+//        if(instance == null){
+//            instance = new Calendar();
+//        }
         return instance;
     }
 

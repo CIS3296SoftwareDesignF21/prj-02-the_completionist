@@ -9,6 +9,7 @@ import javax.swing.JLayeredPane;
 
 public class CalendarPane
 {
+    /*
     static Container pane;
     static DefaultTableModel tableCalendarModel;
     static JButton buttonNext, buttonPrev;
@@ -495,5 +496,7 @@ public class CalendarPane
             }
         }
     }
+
+     */
 }
 

@@ -5,14 +5,22 @@ public class Task {
     private String date;
     private String priority;
     private String tag;
+    private boolean complete;
 
     public Task(String name, String date, String priority, String tag){
         this.name = name;
         this.date = date;
         this.priority = priority;
         this.tag = tag;
+        this.complete = false;
+    }
+    public void setComplete(boolean ans){
+        this.complete = ans;
     }
 
+    public boolean getComplete(){
+        return complete;
+    }
     public String getName() {
         return name;
     }

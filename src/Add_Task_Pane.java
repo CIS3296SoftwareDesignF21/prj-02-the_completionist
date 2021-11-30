@@ -47,6 +47,12 @@ public class Add_Task_Pane extends Application {
         Button btn = new Button();
         btn.setText("Add Task");
 
+        grid.add(btn, 0, 6);
+        Scene scene = new Scene(grid, 350, 250);
+        Stage st = new Stage();
+        st.setScene(scene);
+        st.show();
+
         btn.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
@@ -54,20 +60,18 @@ public class Add_Task_Pane extends Application {
 
                 Calendar cal = Calendar.getInstance();
                 Task newTask = new Task(taskNameField.getText(), date.getEditor().getText(), priorityField.getText() , "True");
-                
+
                 if(cal.addTask(newTask) == 1){
                     System.out.println("Task Added");
                 }
                 else{
                     System.out.println("Task did not add");
                 }
+
+                primaryStage.hide();
+                st.close();
+                primaryStage.show();
             }
         });
-
-        grid.add(btn, 0, 6);
-        Scene scene = new Scene(grid, 350, 250);
-        Stage st = new Stage();
-        st.setScene(scene);
-        st.show();
     }
 }
