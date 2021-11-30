@@ -5,6 +5,9 @@
       <artifact name="prj-02-the_completionist:jar" />
     </artifacts-to-build>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -25,25 +28,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4117b724-82f6-4eb4-80d9-72a84280722d" name="Changes" comment="notepad pane">
-      <change afterPath="$PROJECT_DIR$/src/notepad.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Add_Task_Pane$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Add_Task_Pane$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Add_Task_Pane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Add_Task_Pane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Calendar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Calendar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Main_Menu_Pane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Main_Menu_Pane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Notepad_Pane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Notepad_Pane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Pomodoro_Timer_Pane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Pomodoro_Timer_Pane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/main_menu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Add_Task_Pane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Add_Task_Pane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Calendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calendar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CalendarPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CalendarPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main_Menu_Pane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main_Menu_Pane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Notepad_Pane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Notepad_Pane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_menu.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +121,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>

@@ -10,6 +10,7 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -42,14 +43,14 @@ public class Main_Menu_Pane extends Application  {
 
     int task = cal.addTask(new Task("Do homework", "11/29/21", "High", "School"));
 
-    private TableView<Task> dayTable = new TableView<Task>();
+    private TableView<Task> dayTable = new TableView();
     public ObservableList<Task> dayData =
 
             FXCollections.observableArrayList(
                     todayList = cal.readArray(dtf.format(now))
             );
 
-    private TableView<Task> weekTable = new TableView<Task>();
+    private TableView<Task> weekTable = new TableView();
     public final ObservableList<Task> weekData =
 
             FXCollections.observableArrayList(
@@ -94,12 +95,12 @@ public class Main_Menu_Pane extends Application  {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        //Calendar cal = new Calendar();
+//        Calendar cal = new Calendar();
         Scene scene = new Scene(new Group());
 
         primaryStage.setTitle("Home Menu");
         primaryStage.setWidth(1350);
-        primaryStage.setHeight(700);
+        primaryStage.setHeight(800);
 
         Label dayLabel = new Label("To Do Today");
         dayLabel.setFont(new Font("Arial", 20));
@@ -269,6 +270,8 @@ public class Main_Menu_Pane extends Application  {
         HBox hboxData = new HBox();
         hboxData.getChildren().addAll(dayTable, weekTable);
         hboxData.setSpacing(100);
+        hboxData.setPadding(new Insets(10,10,10,10));
+        hboxData.setAlignment(Pos.CENTER);
 
         HBox hboxButtons = new HBox();
         hboxButtons.getChildren().addAll(button1,button2,button3,button4);
@@ -278,7 +281,31 @@ public class Main_Menu_Pane extends Application  {
         VBox vbox = new VBox();
         vbox.getChildren().addAll(hboxLabels, hboxData, hboxButtons, grid);
 
-        ((Group) scene.getRoot()).getChildren().addAll(vbox);
+        Label label1 = new Label("\"There are two ways of spreading light: to be the candle or mirror that reflects it.\" -Edith Wharton");
+
+        HBox topbuttons = new HBox();
+        topbuttons.getChildren().addAll(button1, button3, label1, button4, button2);
+        topbuttons.setAlignment(Pos.CENTER);
+        topbuttons.setPadding(new Insets(10,10,10,10));
+        topbuttons.setSpacing(100);
+
+//        HBox botbuttons = new HBox();
+//        botbuttons.getChildren().addAll(button3, button4);
+//        botbuttons.setAlignment(Pos.CENTER);
+//        botbuttons.setPadding(new Insets(10,10,10,10));
+//        botbuttons.setSpacing(400);
+
+        Label spacing = new Label();
+        VBox labels_and_data = new VBox();
+        labels_and_data.getChildren().addAll(spacing, hboxLabels, hboxData);
+
+        BorderPane borderPane = new BorderPane();
+        borderPane.setBottom(grid);
+        borderPane.setCenter(labels_and_data);
+        borderPane.setTop(topbuttons);
+        borderPane.setPadding(new Insets(10,10,10,10));
+
+        ((Group) scene.getRoot()).getChildren().addAll(borderPane);
 
         primaryStage.setScene(scene);
         primaryStage.show();
