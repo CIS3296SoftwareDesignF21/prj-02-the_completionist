@@ -10,6 +10,7 @@
 * Finalized the QuickNotes pane
 * Helped finalize the Home Page pane 
 * Modified installable binary to demo for Week 4
+* Updates README
 
 ## Adam:
 * Finalized the Timer pane
@@ -24,5 +25,4 @@
 
 ## Tuan:
 * Helped finalize the Home Page Pane
-* Added functionality to delete tasks
 * Worked on interactivity between calendar back-end and front-end
