@@ -158,14 +158,17 @@ public class Main_Menu_Pane extends Application  {
         weekTable.getColumns().addAll(weekTask, weekDate, weekPriority, weekTag);
 
         Button button1 = new Button("Calendar");
-        /*CalendarPane cal = new CalendarPane();
-        button1.setOnAction(e -> {
+        CalendarPane cal = new CalendarPane();
+        button1.setOnAction(e -> cal.main());
+        /*
+        {
             try {
                 cal.main();
             } catch (FileNotFoundException ex) {
                 ex.printStackTrace();
             }
-        });*/
+        });
+        */
 
         Button button2 = new Button("Add Task");
         Add_Task_Pane add = new Add_Task_Pane();

@@ -54,6 +54,6 @@ public class Task {
     }
 
     public String toString(){
-        return "Task Name: " + name + "\nTask Date: " + date + "\nTask Priority: " + priority + "\nTask Tag: " + tag;
+        return "\nTask Name: " + name + "\nTask Date: " + date + "\nTask Priority: " + priority + "\nTask Tag: " + tag + "\n";
     }
 }

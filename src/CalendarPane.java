@@ -9,7 +9,7 @@ import javax.swing.JLayeredPane;
 
 public class CalendarPane
 {
-    /*
+    
     static Container pane;
     static DefaultTableModel tableCalendarModel;
     static JButton buttonNext, buttonPrev;
@@ -24,17 +24,19 @@ public class CalendarPane
     static Calendar cal2 = new Calendar();
     static to_do_list toDoList = new to_do_list();
     
-    public static void main() throws FileNotFoundException
+    public static void main()
     {
         
-        Calendar cal2 = new Calendar();
-        //cal2.addTask();
-        //cal2.printCalendar();
+        cal2.addTask(new Task("test1", "11/1/2021", "1", "true"));
+        cal2.addTask(new Task("test2", "11/1/2021", "1", "true"));
+        cal2.addTask(new Task("test3", "11/2/2021", "1", "true"));
+        cal2.addTask(new Task("test4", "11/3/2021", "1", "true"));
+        cal2.addTask(new Task("test", "11/30/2021", "1", "true"));
         
         //to_do_list toDoList = new to_do_list();
-        toDoList.add_task( new Task("do Homework", "11/1/2021", 1, "true"));
-        toDoList.add_task( new Task("workout", "11/16/2021", 3, "true"));
-        toDoList.add_task( new Task("meet with project group", "12/17/2021", 2, "true"));
+        //toDoList.add_task( new Task("do Homework", "11/1/2021", 1, "true"));
+        //toDoList.add_task( new Task("workout", "11/16/2021", 3, "true"));
+        //toDoList.add_task( new Task("meet with project group", "12/17/2021", 2, "true"));
         //toDoList.print();
         
         
@@ -238,265 +240,142 @@ public class CalendarPane
         public void actionPerformed(ActionEvent e)
         {
             //get the currentMonth & currentYear from where calendar is, day from button clicked
-            //toString formatting and compare to every task date --- example format: 11/9/21
+            //toString formatting and compare to every task date --- example format: 11/9/2021
             //print if equal
             
-            String dateToString;
+            String dateToString = "";
             
-            ArrayList<Task> toDoList2 = toDoList.getList();
+            //ArrayList<Task> toDoList2 = toDoList.getList();
+            
             
            
             if(e.getSource() == buttonDays[1])
             {
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "1" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "1" + "/" +Integer.toString(currentYear);    
             }
                 
             else if(e.getSource() == buttonDays[2]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "2" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "2" + "/" +Integer.toString(currentYear);      
             }
                 
             else if(e.getSource() == buttonDays[3]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "3" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "3" + "/" +Integer.toString(currentYear);   
             }
                 
             else if(e.getSource() == buttonDays[4]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "4" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "4" + "/" +Integer.toString(currentYear);  
             }
                 
             else if(e.getSource() == buttonDays[5]){
                 dateToString = Integer.toString((currentMonth+1)) + "/" + "5" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
             }
                 
             else if(e.getSource() == buttonDays[6]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "6" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "6" + "/" +Integer.toString(currentYear);    
             }
                 
             else if(e.getSource() == buttonDays[7]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "7" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "7" + "/" +Integer.toString(currentYear);   
             }
                 
             else if(e.getSource() == buttonDays[8]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "8" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "8" + "/" +Integer.toString(currentYear); 
             }
                 
             else if(e.getSource() == buttonDays[9]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "9" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "9" + "/" +Integer.toString(currentYear);  
             }
                 
             else if(e.getSource() == buttonDays[10]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "10" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "10" + "/" +Integer.toString(currentYear);  
             }
                 
             else if(e.getSource() == buttonDays[11]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "11" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "11" + "/" +Integer.toString(currentYear);  
             }
                 
             else if(e.getSource() == buttonDays[12]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "12" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "12" + "/" +Integer.toString(currentYear);   
             }
                 
             else if(e.getSource() == buttonDays[13]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "13" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "13" + "/" +Integer.toString(currentYear);  
             }
                 
             else if(e.getSource() == buttonDays[14]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "14" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "14" + "/" +Integer.toString(currentYear);   
             }
                 
             else if(e.getSource() == buttonDays[15]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "15" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "15" + "/" +Integer.toString(currentYear);   
             }
                 
             else if(e.getSource() == buttonDays[16]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "16" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "16" + "/" +Integer.toString(currentYear);   
             }
                 
             else if(e.getSource() == buttonDays[17]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "17" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "17" + "/" +Integer.toString(currentYear);    
             }
                 
             else if(e.getSource() == buttonDays[18]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "18" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "18" + "/" +Integer.toString(currentYear);    
             }
                 
             else if(e.getSource() == buttonDays[19]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "19" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "19" + "/" +Integer.toString(currentYear);    
             }
                 
             else if(e.getSource() == buttonDays[20]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "20" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "20" + "/" +Integer.toString(currentYear);   
             }
                 
             else if(e.getSource() == buttonDays[21]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "21" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "21" + "/" +Integer.toString(currentYear);    
             }
                 
             else if(e.getSource() == buttonDays[22]){
                 dateToString = Integer.toString((currentMonth+1)) + "/" + "22" + "/" +Integer.toString(currentYear);            
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
             }
                 
             else if(e.getSource() == buttonDays[23]){
                 dateToString = Integer.toString((currentMonth+1)) + "/" + "23" + "/" +Integer.toString(currentYear);    
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
             }
                 
             else if(e.getSource() == buttonDays[24]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "24" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "24" + "/" +Integer.toString(currentYear);    
             }
                 
             else if(e.getSource() == buttonDays[25]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "25" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "25" + "/" +Integer.toString(currentYear);    
             }
                 
             else if(e.getSource() == buttonDays[26]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "26" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "26" + "/" +Integer.toString(currentYear);     
             }
                 
             else if(e.getSource() == buttonDays[27]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "27" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "27" + "/" +Integer.toString(currentYear);     
             }
                 
             else if(e.getSource() == buttonDays[28]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "28" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "28" + "/" +Integer.toString(currentYear);     
             }
                 
             else if(e.getSource() == buttonDays[29]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "29" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "29" + "/" +Integer.toString(currentYear);  
             }
                 
             else if(e.getSource() == buttonDays[30]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "30" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "30" + "/" +Integer.toString(currentYear);   
             }
                 
             else if(e.getSource() == buttonDays[31]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "31" + "/" +Integer.toString(currentYear);                
-                for(int i = 0; i < toDoList.getSize(); i++){                    
-                    if( dateToString.equals(toDoList2.get(i).getDate()) )
-                        System.out.println(toDoList2.get(i));
-                }
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "31" + "/" +Integer.toString(currentYear);       
             }
+            
+            System.out.println(cal2.readArray(dateToString));
+            
         }
     }
-
-     */
 }
-
