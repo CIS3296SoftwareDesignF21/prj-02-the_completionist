@@ -68,6 +68,90 @@ public class Main_Menu_Pane extends Application  {
         int day = dayarr[1];
         return day;
     }
+    
+    public static int parseMonth(){
+        int[] dayarr = new int[3];
+        String date = dtf.format(now);
+        String[] stringarr = date.split("/");
+        for(int k = 0; k < dayarr.length; k++){
+            dayarr[k] = Integer.valueOf(stringarr[k]);
+            System.out.println(dayarr[k]);
+        }
+        int month = dayarr[0];
+        //String month_name = "";
+        /*
+        switch(month){
+            case 1:
+                month_name += "jan";
+                break;
+            case 2:
+                month_name += "feb";
+                break;
+            case 3:
+                month_name += "mar";
+                break;
+            case 4:
+                month_name += "april";
+                break;
+            case 5:
+                month_name += "may";
+                break;
+            case 6:
+                month_name += "june";
+                break;
+            case 7:
+                month_name += "jul";
+                break;
+            case 8:
+                month_name += "aug";
+                break;
+            case 9:
+                month_name += "sept";
+                break;
+            case 10:
+                month_name += "oct";
+                break;
+            case 11:
+                month_name += "nov";
+                break;
+            case 12:
+                month_name += "dec";
+                break;
+        }
+        */
+        return month;
+    }
+
+    public static int parseYear(){
+        int[] dayarr = new int[3];
+        String date = dtf.format(now);
+        String[] stringarr = date.split("/");
+        for(int k = 0; k < dayarr.length; k++){
+            dayarr[k] = Integer.valueOf(stringarr[k]);
+            System.out.println(dayarr[k]);
+        }
+        int year = dayarr[2];
+        String year_string = String.valueOf(year);
+        char[] strarr = year_string.toCharArray();
+        int ret_year = strarr[2] + strarr[3];
+
+        return ret_year;
+    }
+    
+    public static String quote() throws FileNotFoundException {
+        String quote = "";
+        File  quote_file = new File("../demo/src/main/resources/inspirational_quotes.txt");
+        Scanner in = new Scanner(quote_file);
+        Random rand = new Random();
+        int random_int = rand.nextInt(46 - 1) + 1;
+        String[] quote_arr = new String[46];
+        int i = 0;
+        while(in.hasNextLine()){
+            quote_arr[i] = in.nextLine();
+        }
+        quote += quote_arr[random_int];
+        return quote;
+    }
 
     public static void main(String[] args) {
         testarr.add(new Task("Do homework", "11/29/21", "High", "School"));
@@ -249,6 +333,43 @@ public class Main_Menu_Pane extends Application  {
                 dayData = FXCollections.observableArrayList(
                         todayList = cal.readArray(dtf.format(now))
                 );
+                
+                                int day = parseDay() + 1;
+                String day_string = "";
+                if(day < 10){
+                    day_string = "0" + String.valueOf(day);
+                }
+                else{
+                    day_string = String.valueOf(day);
+                }
+
+                int month = parseMonth();
+                String month_string = "";
+                if(month < 10){
+                    month_string = "0" + String.valueOf(day);
+                }
+                else{
+                    month_string = String.valueOf(day);
+                }
+
+                int year = parseYear();
+                ArrayList<Task> temp = new ArrayList<Task>();
+                int i = 0;
+                while(i < 7){
+                    if(day > 32){
+                        break;
+                    }
+                    else{
+                        String date = month_string + "/" + day_string + "/" + String.valueOf(year);
+                        temp = cal.readArray(date);
+                        for(int j = 0; j < temp.size(); j++){
+                            sevenDays.add(temp.get(j));
+                        }
+                    }
+                    i++;
+                    day++;
+                }
+                weekData = FXCollections.observableArrayList(sevenDays);
 
                 dayTable.setItems(dayData);
                 taskNameField.clear();
