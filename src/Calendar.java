@@ -24,7 +24,7 @@ public class Calendar {
     // }
 
     //singleton
-    private Calendar(){
+    public Calendar(){
 
         jan = new ArrayList[31];
         feb = new ArrayList[31];
@@ -52,7 +52,6 @@ public class Calendar {
             oct[i] = new ArrayList<Task>();
             nov[i] = new ArrayList<Task>();
             dec[i] = new ArrayList<Task>();
-
         }
             
     }
@@ -62,7 +61,8 @@ public class Calendar {
 //            instance = new Calendar();
 //        }
         return instance;
-    }
+    }    
+    
 
     public void deleteTask(Task task){
 

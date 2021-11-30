@@ -8,7 +8,7 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import sun.tools.jstat.Alignment;
+//import sun.tools.jstat.Alignment;
 
 import java.io.File;
 import java.io.FileWriter;
