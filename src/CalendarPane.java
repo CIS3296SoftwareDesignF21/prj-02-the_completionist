@@ -247,15 +247,19 @@ public class CalendarPane
             
             //ArrayList<Task> toDoList2 = toDoList.getList();
             
+            ArrayList<Task>[] nov = cal2.getNov();
+            
             
            
             if(e.getSource() == buttonDays[1])
             {
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "1" + "/" +Integer.toString(currentYear);    
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "1" + "/" +Integer.toString(currentYear);  
+                System.out.println(nov[0]);
             }
                 
             else if(e.getSource() == buttonDays[2]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "2" + "/" +Integer.toString(currentYear);      
+                dateToString = Integer.toString((currentMonth+1)) + "/" + "2" + "/" +Integer.toString(currentYear);
+                System.out.println(nov[1]);
             }
                 
             else if(e.getSource() == buttonDays[3]){
@@ -374,7 +378,12 @@ public class CalendarPane
                 dateToString = Integer.toString((currentMonth+1)) + "/" + "31" + "/" +Integer.toString(currentYear);       
             }
             
-            System.out.println(cal2.readArray(dateToString));
+            
+            
+            
+            
+            
+            //System.out.println(cal2.readArray(dateToString));
             
         }
     }
