@@ -1,4 +1,5 @@
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.*;
 import javax.swing.*;
 import java.awt.*;
@@ -11,7 +12,7 @@ import javafx.stage.Stage;
 
 public class main extends Application{
     @Override
-    public void start (Stage arg0) throws Exception {
+    public void start (Stage arg0) throws IOException {
         notepad np = new notepad();
     }
 

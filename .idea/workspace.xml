@@ -27,6 +27,7 @@
     <list default="true" id="4117b724-82f6-4eb4-80d9-72a84280722d" name="Changes" comment="Changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/notepad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/notepad.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +57,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager" selected="Application.main">
@@ -142,9 +144,33 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2693" y="247" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637021788844" />
-    <state x="2545" y="255" key="run.anything.popup" timestamp="1637020390169">
+    <state width="1638" height="285" key="GridCell.Tab.0.bottom" timestamp="1638230548668">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state width="1638" height="285" key="GridCell.Tab.0.bottom/0.25.1680.1025@0.25.1680.1025" timestamp="1638230548668" />
+    <state width="1878" height="294" key="GridCell.Tab.0.bottom/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1638227534776" />
+    <state width="1239" height="294" key="GridCell.Tab.0.bottom/0.25.1920.1055/1920.25.1920.1055@1920.25.1920.1055" timestamp="1638228089227" />
+    <state width="1638" height="285" key="GridCell.Tab.0.center" timestamp="1638230548667">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state width="1638" height="285" key="GridCell.Tab.0.center/0.25.1680.1025@0.25.1680.1025" timestamp="1638230548667" />
+    <state width="1878" height="294" key="GridCell.Tab.0.center/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1638227534774" />
+    <state width="1239" height="294" key="GridCell.Tab.0.center/0.25.1920.1055/1920.25.1920.1055@1920.25.1920.1055" timestamp="1638228089226" />
+    <state width="1638" height="285" key="GridCell.Tab.0.left" timestamp="1638230548667">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state width="1638" height="285" key="GridCell.Tab.0.left/0.25.1680.1025@0.25.1680.1025" timestamp="1638230548667" />
+    <state width="1878" height="294" key="GridCell.Tab.0.left/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1638227534774" />
+    <state width="1239" height="294" key="GridCell.Tab.0.left/0.25.1920.1055/1920.25.1920.1055@1920.25.1920.1055" timestamp="1638228089226" />
+    <state width="1638" height="285" key="GridCell.Tab.0.right" timestamp="1638230548668">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state width="1638" height="285" key="GridCell.Tab.0.right/0.25.1680.1025@0.25.1680.1025" timestamp="1638230548668" />
+    <state width="1878" height="294" key="GridCell.Tab.0.right/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1638227534775" />
+    <state width="1239" height="294" key="GridCell.Tab.0.right/0.25.1920.1055/1920.25.1920.1055@1920.25.1920.1055" timestamp="1638228089227" />
+    <state x="2545" y="255" key="run.anything.popup" timestamp="1638227480030">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2545" y="255" key="run.anything.popup/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1637020390169" />
+    <state x="2545" y="255" key="run.anything.popup/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1638227480030" />
   </component>
 </project>
