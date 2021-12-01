@@ -9,8 +9,8 @@ import javax.swing.JLayeredPane;
 
 public class CalendarPane
 {
-    
-    static Container pane;
+    static JFrame printTasks;
+    static Container pane, paneTasks;
     static DefaultTableModel tableCalendarModel;
     static JButton buttonNext, buttonPrev;
     static JFrame frameMain;
@@ -22,6 +22,7 @@ public class CalendarPane
     
     static JButton buttonDays[] = new JButton[32];
     Calendar cal2 = Calendar.getInstance();
+    TextArea taskText = new TextArea();
     
     public void main()
     {
@@ -29,6 +30,12 @@ public class CalendarPane
         frameMain = new JFrame("The Completionist");
         frameMain.setSize(750, 750);
         pane = frameMain.getContentPane();
+        
+        printTasks = new JFrame("Tasks");
+        printTasks.setSize(750, 750);
+        paneTasks = printTasks.getContentPane();
+        taskText.setEditable(false);
+        paneTasks.add(taskText);
         
         //navigation
         labelMonth = new JLabel("January");
@@ -57,6 +64,7 @@ public class CalendarPane
         buttonPrev.setBounds(10, 25, 50, 25);
         stableCalendar.setBounds(10, 50, 400, 400);
         frameMain.setVisible(true);
+        printTasks.setVisible(false);
         
         //add controls to screen
         pane.add(panelCalendar);
@@ -224,7 +232,11 @@ public class CalendarPane
     {
         public void actionPerformed(ActionEvent e)
         {            
+            printTasks.setVisible(true);
+                    
             ArrayList<Task>[] buttonMonth = cal2.getJan();
+            
+            taskText.setText("");
             
             int monthClicked = currentMonth+1;
             
@@ -273,127 +285,127 @@ public class CalendarPane
            
             if(e.getSource() == buttonDays[1])
             {
-                System.out.println("Tasks for the day: " + buttonMonth[0]);
+                taskText.append("\nTasks for the day: " + buttonMonth[0]);
             }
                 
             else if(e.getSource() == buttonDays[2]){
-                System.out.println("Tasks for the day: " + buttonMonth[1]);     
+                taskText.append("\nTasks for the day: " + buttonMonth[1]);     
             }
                 
             else if(e.getSource() == buttonDays[3]){
-                System.out.println("Tasks for the day: " + buttonMonth[2]); 
+                taskText.append("\nTasks for the day: " + buttonMonth[2]); 
             }
                 
             else if(e.getSource() == buttonDays[4]){
-                System.out.println("Tasks for the day: " + buttonMonth[3]);  
+                taskText.append("\nTasks for the day: " + buttonMonth[3]);  
             }
                 
             else if(e.getSource() == buttonDays[5]){
-                System.out.println("Tasks for the day: " + buttonMonth[4]);               
+                taskText.append("\nTasks for the day: " + buttonMonth[4]);               
             }
                 
             else if(e.getSource() == buttonDays[6]){
-                System.out.println("Tasks for the day: " + buttonMonth[5]);    
+                taskText.append("\nTasks for the day: " + buttonMonth[5]);    
             }
                 
             else if(e.getSource() == buttonDays[7]){
-                System.out.println("Tasks for the day: " + buttonMonth[6]);   
+                taskText.append("\nTasks for the day: " + buttonMonth[6]);   
             }
                 
             else if(e.getSource() == buttonDays[8]){
-                System.out.println("Tasks for the day: " + buttonMonth[7]); 
+                taskText.append("\nTasks for the day: " + buttonMonth[7]); 
             }
                 
             else if(e.getSource() == buttonDays[9]){
-                System.out.println("Tasks for the day: " + buttonMonth[8]); 
+                taskText.append("\nTasks for the day: " + buttonMonth[8]); 
             }
                 
             else if(e.getSource() == buttonDays[10]){
-                System.out.println("Tasks for the day: " + buttonMonth[9]); 
+                taskText.append("\nTasks for the day: " + buttonMonth[9]); 
             }
                 
             else if(e.getSource() == buttonDays[11]){
-                System.out.println("Tasks for the day: " + buttonMonth[10]); 
+                taskText.append("\nTasks for the day: " + buttonMonth[10]); 
             }
                 
             else if(e.getSource() == buttonDays[12]){
-                System.out.println("Tasks for the day: " + buttonMonth[11]);   
+                taskText.append("\nTasks for the day: " + buttonMonth[11]);   
             }
                 
             else if(e.getSource() == buttonDays[13]){
-                System.out.println("Tasks for the day: " + buttonMonth[12]);
+                taskText.append("\nTasks for the day: " + buttonMonth[12]);
             }
                 
             else if(e.getSource() == buttonDays[14]){
-                System.out.println("Tasks for the day: " + buttonMonth[13]); 
+               taskText.append("\nTasks for the day: " + buttonMonth[13]); 
             }
                 
             else if(e.getSource() == buttonDays[15]){
-                System.out.println("Tasks for the day: " + buttonMonth[14]);  
+                taskText.append("\nTasks for the day: " + buttonMonth[14]);  
             }
                 
             else if(e.getSource() == buttonDays[16]){
-                System.out.println("Tasks for the day: " + buttonMonth[15]);
+                taskText.append("\nTasks for the day: " + buttonMonth[15]);
             }
                 
             else if(e.getSource() == buttonDays[17]){
-                System.out.println("Tasks for the day: " + buttonMonth[16]);   
+                taskText.append("\nTasks for the day: " + buttonMonth[16]);   
             }
                 
             else if(e.getSource() == buttonDays[18]){
-                System.out.println("Tasks for the day: " + buttonMonth[17]);    
+                taskText.append("\nTasks for the day: " + buttonMonth[17]);    
             }
                 
             else if(e.getSource() == buttonDays[19]){
-                System.out.println("Tasks for the day: " + buttonMonth[18]);    
+                taskText.append("\nTasks for the day: " + buttonMonth[18]);    
             }
                 
             else if(e.getSource() == buttonDays[20]){
-                System.out.println("Tasks for the day: " + buttonMonth[19]);   
+                taskText.append("\nTasks for the day: " + buttonMonth[19]);   
             }
                 
             else if(e.getSource() == buttonDays[21]){
-                System.out.println("Tasks for the day: " + buttonMonth[20]);    
+                taskText.append("\nTasks for the day: " + buttonMonth[20]);    
             }
                 
             else if(e.getSource() == buttonDays[22]){
-                System.out.println("Tasks for the day: " + buttonMonth[21]);           
+                taskText.append("\nTasks for the day: " + buttonMonth[21]);           
             }
                 
             else if(e.getSource() == buttonDays[23]){
-                System.out.println("Tasks for the day: " + buttonMonth[22]);   
+                taskText.append("\nTasks for the day: " + buttonMonth[22]);   
             }
                 
             else if(e.getSource() == buttonDays[24]){
-                System.out.println("Tasks for the day: " + buttonMonth[23]);   
+                taskText.append("\nTasks for the day: " + buttonMonth[23]);   
             }
                 
             else if(e.getSource() == buttonDays[25]){
-                System.out.println("Tasks for the day: " + buttonMonth[24]);   
+                taskText.append("\nTasks for the day: " + buttonMonth[24]);   
             }
                 
             else if(e.getSource() == buttonDays[26]){
-                System.out.println("Tasks for the day: " + buttonMonth[25]);    
+                taskText.append("\nTasks for the day: " + buttonMonth[25]);    
             }
                 
             else if(e.getSource() == buttonDays[27]){
-                System.out.println("Tasks for the day: " + buttonMonth[26]);   
+                taskText.append("\nTasks for the day: " + buttonMonth[26]);   
             }
                 
             else if(e.getSource() == buttonDays[28]){
-                System.out.println("Tasks for the day: " + buttonMonth[27]);     
+                taskText.append("\nTasks for the day: " + buttonMonth[27]);     
             }
                 
             else if(e.getSource() == buttonDays[29]){
-                System.out.println("Tasks for the day: " + buttonMonth[28]);
+                taskText.append("\nTasks for the day: " + buttonMonth[28]);
             }
                 
             else if(e.getSource() == buttonDays[30]){
-                System.out.println("Tasks for the day: " + buttonMonth[29]);  
+                taskText.append("\nTasks for the day: " + buttonMonth[29]);  
             }
                 
             else if(e.getSource() == buttonDays[31]){
-                System.out.println("Tasks for the day: " + buttonMonth[30]);      
+                taskText.append("\nTasks for the day: " + buttonMonth[30]);      
             }
         }
     }
