@@ -15,10 +15,24 @@ These features are able to communicate and interact with each other. For example
 
 ### Installation Instructions
 
-FIRST:  Download the latest release of the Completionist and unzip contents. Keep note of the absolute filepath to the newly downloaded release of the Completionist. Also create a `.txt` document in the directory that contains the Completionist called `completionistNotepad.txt`. Make sure that the `.txt` file is not inside the Completionist folder that was created from unzipping.
+FIRST:  Download the latest release of the Completionist and unzip contents. Depending on how the file is unzipped, it may or may not create a duplicate folder. If there is a duplicate folder, please delete it. You should be left with one main folder named `prj-02-the_completionist-1.0.2-alpha` along with the numerous contents within the folder (source code and documents). Keep note of the absolute filepath to `prj-02-the_completionist-1.0.2-alpha`. Also create a `.txt` document in the directory that contains the Completionist called `completionistNotepad`. Make sure that the `.txt` file is not inside the Completionist folder that was created from unzipping. For example, if the relative filepath to the Completionist is `..\Downloads\prj-02-the_completionist-1.0.2-alpha`, the `.txt` document should be in `..\Downloads`.
 
-MacOS: If you are on Mac, open the terminal. From here, change the directory to the directory containing the unzipped contents of the Completionist. Once inside the directory of the Completionist, proceed with the following command, `java --module-path $PATH_TO_THE_COMPLETIONIST/prj-02-the_completionist-1.0.2-alpha/libMacOS --add-modules javafx.controls -jar prj-02-the_completionist.jar`. Example, `java --module-path /Users/tj/Downloads/prj-02-the_completionist-1.0.2-alpha/libMacOS --add-modules javafx.controls -jar prj-02-the_completionist.jar`. The .jar file should execute successfully. 
+MacOS: If you are on Mac, open the terminal. From here, change the directory to the directory containing the unzipped contents of the Completionist. 
+For example, 
+`/Users/tj/Downloads/prj-02-the_completionist-1.0.2-alpha/`. 
+Once inside the directory of the Completionist, proceed with the following command, 
+`java --module-path $PATH_TO_THE_COMPLETIONIST/prj-02-the_completionist-1.0.2-alpha/libMacOS --add-modules javafx.controls -jar prj-02-the_completionist.jar`. 
+Example, 
+`java --module-path /Users/tj/Downloads/prj-02-the_completionist-1.0.2-alpha/libMacOS --add-modules javafx.controls -jar prj-02-the_completionist.jar`. 
+The .jar file should execute successfully. 
 
-Windows: If you are on Windows, open the command line. From here, change the directory to the directory containing the unzipped contents of the Completionist. Once inside the directory of the Completionist, proceed with the following command, `java --module-path $PATH_TO_THE_COMPLETIONIST\prj-02-the_completionist-1.0.2-alpha\libWin\lib --add-modules javafx.controls -jar prj-02-the_completionist.jar`. Example, `java --module-path \Users\tj\Downloads\prj-02-the_completionist-1.0.2-alpha\libWin\lib --add-modules javafx.controls -jar prj-02-the_completionist.jar`. The .jar file should execute successfully.
+Windows: If you are on Windows, open the command line. From here, change the directory to the directory containing the unzipped contents of the Completionist. 
+For example, 
+`\Users\tj\Downloads\prj-02-the_completionist-1.0.2-alpha`. 
+Once inside the directory of the Completionist, proceed with the following command, 
+`java --module-path $PATH_TO_THE_COMPLETIONIST\prj-02-the_completionist-1.0.2-alpha\libWin\lib --add-modules javafx.controls -jar prj-02-the_completionist.jar`. 
+Example, 
+`java --module-path \Users\tj\Downloads\prj-02-the_completionist-1.0.2-alpha\libWin\lib --add-modules javafx.controls -jar prj-02-the_completionist.jar`. 
+The .jar file should execute successfully.
 
 The Completionist is still in pre-release stages. Bugs and errors potentially exist. Please give us time and patience as we are constantly looking to improve functionality and stability of the app.
