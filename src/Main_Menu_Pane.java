@@ -270,7 +270,7 @@ public class Main_Menu_Pane extends Application  {
         //Add_Task_Pane add = new Add_Task_Pane();
         button2.setOnAction(e -> {
             //add.start(primaryStage);
-            actualCal.writeToFile();
+            //actualCal.writeToFile();
         });
 
         Button button3 = new Button("Pomodoro Timer");

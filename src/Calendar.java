@@ -55,6 +55,56 @@ public class Calendar {
         }
             
     }
+    
+    public ArrayList<Task>[] getJan(){
+        return jan;
+    }
+    
+    public ArrayList<Task>[] getFeb(){
+        return feb;
+    }
+    
+    public ArrayList<Task>[] getMar(){
+        return mar;
+    }
+    
+    public ArrayList<Task>[] getApril(){
+        return april;
+    }
+    
+    public ArrayList<Task>[] getMay(){
+        return may;
+    }
+    
+    public ArrayList<Task>[] getJune(){
+        return june;
+    }
+    
+    public ArrayList<Task>[] getJul(){
+        return jul;
+    }
+    
+    public ArrayList<Task>[] getAug(){
+        return aug;
+    }
+    
+    public ArrayList<Task>[] getSept(){
+        return sept;
+    }
+    
+    public ArrayList<Task>[] getOct(){
+        return oct;
+    }
+    
+    public ArrayList<Task>[] getNov(){
+        return nov;
+    }
+    
+    public ArrayList<Task>[] getDec(){
+        return dec;
+    }
+    
+    
 
     public static Calendar getInstance(){
 //        if(instance == null){
