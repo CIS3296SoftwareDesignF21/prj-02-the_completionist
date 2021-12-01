@@ -9,8 +9,8 @@ import javax.swing.JLayeredPane;
 
 public class CalendarPane
 {
-    
-    static Container pane;
+    static JFrame printTasks;
+    static Container pane, paneTasks;
     static DefaultTableModel tableCalendarModel;
     static JButton buttonNext, buttonPrev;
     static JFrame frameMain;
@@ -21,29 +21,21 @@ public class CalendarPane
     static int actualDay, actualMonth, actualYear, currentMonth, currentYear;
     
     static JButton buttonDays[] = new JButton[32];
-    static Calendar cal2 = new Calendar();
-    static to_do_list toDoList = new to_do_list();
+    Calendar cal2 = Calendar.getInstance();
+    TextArea taskText = new TextArea();
     
-    public static void main()
+    public void main()
     {
-        
-        cal2.addTask(new Task("test1", "11/1/2021", "1", "true"));
-        cal2.addTask(new Task("test2", "11/1/2021", "1", "true"));
-        cal2.addTask(new Task("test3", "11/2/2021", "1", "true"));
-        cal2.addTask(new Task("test4", "11/3/2021", "1", "true"));
-        cal2.addTask(new Task("test", "11/30/2021", "1", "true"));
-        
-        //to_do_list toDoList = new to_do_list();
-        //toDoList.add_task( new Task("do Homework", "11/1/2021", 1, "true"));
-        //toDoList.add_task( new Task("workout", "11/16/2021", 3, "true"));
-        //toDoList.add_task( new Task("meet with project group", "12/17/2021", 2, "true"));
-        //toDoList.print();
-        
-        
         //prep frame
         frameMain = new JFrame("The Completionist");
         frameMain.setSize(750, 750);
         pane = frameMain.getContentPane();
+        
+        printTasks = new JFrame("Tasks");
+        printTasks.setSize(750, 750);
+        paneTasks = printTasks.getContentPane();
+        taskText.setEditable(false);
+        paneTasks.add(taskText);
         
         //navigation
         labelMonth = new JLabel("January");
@@ -72,6 +64,7 @@ public class CalendarPane
         buttonPrev.setBounds(10, 25, 50, 25);
         stableCalendar.setBounds(10, 50, 400, 400);
         frameMain.setVisible(true);
+        printTasks.setVisible(false);
         
         //add controls to screen
         pane.add(panelCalendar);
@@ -235,147 +228,185 @@ public class CalendarPane
     }
     
     
-    static class buttonDays_Action implements ActionListener
+    class buttonDays_Action implements ActionListener
     {
         public void actionPerformed(ActionEvent e)
-        {
-            //get the currentMonth & currentYear from where calendar is, day from button clicked
-            //toString formatting and compare to every task date --- example format: 11/9/2021
-            //print if equal
+        {            
+            printTasks.setVisible(true);
+                    
+            ArrayList<Task>[] buttonMonth = cal2.getJan();
             
-            String dateToString = "";
+            taskText.setText("");
             
-            //ArrayList<Task> toDoList2 = toDoList.getList();
+            int monthClicked = currentMonth+1;
+            
+            switch (monthClicked){
+                case 1: buttonMonth = cal2.getJan();
+                        break;
+                        
+                case 2: buttonMonth = cal2.getFeb();
+                        break;
+                    
+                case 3: buttonMonth = cal2.getMar();
+                        break;
+                        
+                case 4: buttonMonth = cal2.getApril();
+                        break;
+                    
+                case 5: buttonMonth = cal2.getMay();
+                        break;
+                        
+                case 6: buttonMonth = cal2.getJune();
+                        break;
+                    
+                case 7: buttonMonth = cal2.getJul();
+                        break;
+                        
+                case 8: buttonMonth = cal2.getAug();
+                        break;
+                    
+                case 9: buttonMonth = cal2.getSept();
+                        break;
+                        
+                case 10: buttonMonth = cal2.getOct();
+                         break;
+                    
+                case 11: buttonMonth = cal2.getNov();
+                         break;
+                        
+                case 12: buttonMonth = cal2.getDec();
+                         break;
+                    
+                default: break;
+                    
+            }
             
             
            
             if(e.getSource() == buttonDays[1])
             {
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "1" + "/" +Integer.toString(currentYear);    
+                taskText.append("\nTasks for the day: " + buttonMonth[0]);
             }
                 
             else if(e.getSource() == buttonDays[2]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "2" + "/" +Integer.toString(currentYear);      
+                taskText.append("\nTasks for the day: " + buttonMonth[1]);     
             }
                 
             else if(e.getSource() == buttonDays[3]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "3" + "/" +Integer.toString(currentYear);   
+                taskText.append("\nTasks for the day: " + buttonMonth[2]); 
             }
                 
             else if(e.getSource() == buttonDays[4]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "4" + "/" +Integer.toString(currentYear);  
+                taskText.append("\nTasks for the day: " + buttonMonth[3]);  
             }
                 
             else if(e.getSource() == buttonDays[5]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "5" + "/" +Integer.toString(currentYear);                
+                taskText.append("\nTasks for the day: " + buttonMonth[4]);               
             }
                 
             else if(e.getSource() == buttonDays[6]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "6" + "/" +Integer.toString(currentYear);    
+                taskText.append("\nTasks for the day: " + buttonMonth[5]);    
             }
                 
             else if(e.getSource() == buttonDays[7]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "7" + "/" +Integer.toString(currentYear);   
+                taskText.append("\nTasks for the day: " + buttonMonth[6]);   
             }
                 
             else if(e.getSource() == buttonDays[8]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "8" + "/" +Integer.toString(currentYear); 
+                taskText.append("\nTasks for the day: " + buttonMonth[7]); 
             }
                 
             else if(e.getSource() == buttonDays[9]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "9" + "/" +Integer.toString(currentYear);  
+                taskText.append("\nTasks for the day: " + buttonMonth[8]); 
             }
                 
             else if(e.getSource() == buttonDays[10]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "10" + "/" +Integer.toString(currentYear);  
+                taskText.append("\nTasks for the day: " + buttonMonth[9]); 
             }
                 
             else if(e.getSource() == buttonDays[11]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "11" + "/" +Integer.toString(currentYear);  
+                taskText.append("\nTasks for the day: " + buttonMonth[10]); 
             }
                 
             else if(e.getSource() == buttonDays[12]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "12" + "/" +Integer.toString(currentYear);   
+                taskText.append("\nTasks for the day: " + buttonMonth[11]);   
             }
                 
             else if(e.getSource() == buttonDays[13]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "13" + "/" +Integer.toString(currentYear);  
+                taskText.append("\nTasks for the day: " + buttonMonth[12]);
             }
                 
             else if(e.getSource() == buttonDays[14]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "14" + "/" +Integer.toString(currentYear);   
+               taskText.append("\nTasks for the day: " + buttonMonth[13]); 
             }
                 
             else if(e.getSource() == buttonDays[15]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "15" + "/" +Integer.toString(currentYear);   
+                taskText.append("\nTasks for the day: " + buttonMonth[14]);  
             }
                 
             else if(e.getSource() == buttonDays[16]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "16" + "/" +Integer.toString(currentYear);   
+                taskText.append("\nTasks for the day: " + buttonMonth[15]);
             }
                 
             else if(e.getSource() == buttonDays[17]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "17" + "/" +Integer.toString(currentYear);    
+                taskText.append("\nTasks for the day: " + buttonMonth[16]);   
             }
                 
             else if(e.getSource() == buttonDays[18]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "18" + "/" +Integer.toString(currentYear);    
+                taskText.append("\nTasks for the day: " + buttonMonth[17]);    
             }
                 
             else if(e.getSource() == buttonDays[19]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "19" + "/" +Integer.toString(currentYear);    
+                taskText.append("\nTasks for the day: " + buttonMonth[18]);    
             }
                 
             else if(e.getSource() == buttonDays[20]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "20" + "/" +Integer.toString(currentYear);   
+                taskText.append("\nTasks for the day: " + buttonMonth[19]);   
             }
                 
             else if(e.getSource() == buttonDays[21]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "21" + "/" +Integer.toString(currentYear);    
+                taskText.append("\nTasks for the day: " + buttonMonth[20]);    
             }
                 
             else if(e.getSource() == buttonDays[22]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "22" + "/" +Integer.toString(currentYear);            
+                taskText.append("\nTasks for the day: " + buttonMonth[21]);           
             }
                 
             else if(e.getSource() == buttonDays[23]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "23" + "/" +Integer.toString(currentYear);    
+                taskText.append("\nTasks for the day: " + buttonMonth[22]);   
             }
                 
             else if(e.getSource() == buttonDays[24]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "24" + "/" +Integer.toString(currentYear);    
+                taskText.append("\nTasks for the day: " + buttonMonth[23]);   
             }
                 
             else if(e.getSource() == buttonDays[25]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "25" + "/" +Integer.toString(currentYear);    
+                taskText.append("\nTasks for the day: " + buttonMonth[24]);   
             }
                 
             else if(e.getSource() == buttonDays[26]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "26" + "/" +Integer.toString(currentYear);     
+                taskText.append("\nTasks for the day: " + buttonMonth[25]);    
             }
                 
             else if(e.getSource() == buttonDays[27]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "27" + "/" +Integer.toString(currentYear);     
+                taskText.append("\nTasks for the day: " + buttonMonth[26]);   
             }
                 
             else if(e.getSource() == buttonDays[28]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "28" + "/" +Integer.toString(currentYear);     
+                taskText.append("\nTasks for the day: " + buttonMonth[27]);     
             }
                 
             else if(e.getSource() == buttonDays[29]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "29" + "/" +Integer.toString(currentYear);  
+                taskText.append("\nTasks for the day: " + buttonMonth[28]);
             }
                 
             else if(e.getSource() == buttonDays[30]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "30" + "/" +Integer.toString(currentYear);   
+                taskText.append("\nTasks for the day: " + buttonMonth[29]);  
             }
                 
             else if(e.getSource() == buttonDays[31]){
-                dateToString = Integer.toString((currentMonth+1)) + "/" + "31" + "/" +Integer.toString(currentYear);       
+                taskText.append("\nTasks for the day: " + buttonMonth[30]);      
             }
-            
-            System.out.println(cal2.readArray(dateToString));
-            
         }
     }
 }
