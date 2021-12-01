@@ -28,27 +28,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4117b724-82f6-4eb4-80d9-72a84280722d" name="Changes" comment="notepad pane">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/prj_02_the_completionist_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/theCompletionist.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/artifacts/prj_02_the_completionist_jar/prj-02-the_completionist.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/artifacts/prj_02_the_completionist_jar/prj-02-the_completionist.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Add_Task_Pane$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Add_Task_Pane$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Add_Task_Pane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Add_Task_Pane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Calendar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Calendar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane$buttonDays_Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane$buttonDays_Action.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane$buttonNext_Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane$buttonNext_Action.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane$buttonPrev_Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane$buttonPrev_Action.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane$tableCalendarRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane$tableCalendarRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Main_Menu_Pane$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Main_Menu_Pane$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Main_Menu_Pane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Main_Menu_Pane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Notepad_Pane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Notepad_Pane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/notepad.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/notepad.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Calendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calendar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main_Menu_Pane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main_Menu_Pane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Notepad_Pane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Notepad_Pane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/notepad.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/notepad.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
