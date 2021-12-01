@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.*;
+import java.net.URL;
 
 public class Notepad_Pane extends Application{
 
@@ -42,8 +43,25 @@ public class Notepad_Pane extends Application{
         textArea.setPrefWidth(300);
         textArea.setWrapText(true);
 
+        // solution for jar file read error. jar files cannot access reference files for read/write purposes.
+        String filePath = new File("").getAbsolutePath();
+        String newFilePath = filePath + "/src/notepad.txt";
+        int lengthOfFilePath = filePath.length();
+        String slicedFilePath = newFilePath.substring(0, (lengthOfFilePath - 36)); //86  before
+        String finalFilePath =  slicedFilePath + "/completionistNotepad.txt";
+        System.out.println(filePath);
+        System.out.println(newFilePath);
+        System.out.println(slicedFilePath);
+        System.out.println(finalFilePath);
+
+        // IDE solution
+//        FileReader fr = new FileReader (
+//                "../prj-02-the_completionist/src/notepad.txt");
+
+        System.out.println();
+
         FileReader fr = new FileReader (
-                "../prj-02-the_completionist/src/notepad.txt");
+                finalFilePath);
 
         int i;
         StringBuilder notepadContent = new StringBuilder("");
@@ -62,9 +80,15 @@ public class Notepad_Pane extends Application{
 //                    FileChooser fc = new FileChooser();
 //                    FileChooser.ExtensionFilter ext = new FileChooser.ExtensionFilter("txt files", "*.txt");
 //                    File saveFile = fc.showSaveDialog(null);
-            File fold = new File ("../prj-02-the_completionist/src/notepad.txt");
+
+            //IDE SOLN
+//            File fold = new File ("../prj-02-the_completionist/src/notepad.txt");
+//            fold.delete();
+//            File fnew = new File ("../prj-02-the_completionist/src/notepad.txt");
+
+            File fold = new File (finalFilePath);
             fold.delete();
-            File fnew = new File ("../prj-02-the_completionist/src/notepad.txt");
+            File fnew = new File (finalFilePath);
 
             try {
                 FileWriter fw = new FileWriter(fnew);

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="prj-02-the_completionist:jar" />
+      <artifact name="theCompletionist" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -28,7 +28,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4117b724-82f6-4eb4-80d9-72a84280722d" name="Changes" comment="notepad pane">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/prj_02_the_completionist_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/theCompletionist.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/artifacts/prj_02_the_completionist_jar/prj-02-the_completionist.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/artifacts/prj_02_the_completionist_jar/prj-02-the_completionist.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Add_Task_Pane$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Add_Task_Pane$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Add_Task_Pane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Add_Task_Pane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Calendar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Calendar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane$buttonDays_Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane$buttonDays_Action.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane$buttonNext_Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane$buttonNext_Action.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane$buttonPrev_Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane$buttonPrev_Action.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane$tableCalendarRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane$tableCalendarRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/CalendarPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Main_Menu_Pane$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Main_Menu_Pane$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Main_Menu_Pane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Main_Menu_Pane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Notepad_Pane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Notepad_Pane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/Task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/notepad.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/mainTest/production/prj-02-the_completionist/notepad.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calendar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main_Menu_Pane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main_Menu_Pane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Notepad_Pane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Notepad_Pane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/notepad.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/notepad.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,9 +76,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="JavaFX" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
   </component>
   <component name="RecentsManager">
@@ -88,6 +109,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Notepad_Pane" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Notepad_Pane" />
+      <module name="prj-02-the_completionist" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="guiMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="guiMain" />
       <module name="prj-02-the_completionist" />
@@ -95,33 +123,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="main" />
-      <module name="prj-02-the_completionist" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.main" />
       <item itemvalue="Application.Main_Menu_Pane" />
       <item itemvalue="Application.guiMain" />
       <item itemvalue="Application.Calendar" />
       <item itemvalue="Application.Add_Task_Pane" />
+      <item itemvalue="Application.Notepad_Pane" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main_Menu_Pane" />
+        <item itemvalue="Application.Notepad_Pane" />
         <item itemvalue="Application.Add_Task_Pane" />
         <item itemvalue="Application.Calendar" />
         <item itemvalue="Application.guiMain" />
-        <item itemvalue="Application.main" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -178,34 +197,34 @@
     </state>
     <state x="623" y="280" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1637083585152" />
     <state x="623" y="298" key="#com.intellij.ide.util.TreeClassChooserDialog/0.25.1680.1025@0.25.1680.1025" timestamp="1638232479679" />
-    <state width="792" height="284" key="GridCell.Tab.0.bottom" timestamp="1638236465493">
+    <state width="1638" height="341" key="GridCell.Tab.0.bottom" timestamp="1638365418534">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="792" height="284" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1638236465493" />
+    <state width="1638" height="341" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1638365418534" />
     <state width="1638" height="284" key="GridCell.Tab.0.bottom/0.25.1680.1025@0.25.1680.1025" timestamp="1638233281747" />
     <state width="1878" height="355" key="GridCell.Tab.0.bottom/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1638130228258" />
-    <state width="792" height="284" key="GridCell.Tab.0.center" timestamp="1638236465492">
+    <state width="1638" height="341" key="GridCell.Tab.0.center" timestamp="1638365418534">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="792" height="284" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1638236465492" />
+    <state width="1638" height="341" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1638365418534" />
     <state width="1638" height="284" key="GridCell.Tab.0.center/0.25.1680.1025@0.25.1680.1025" timestamp="1638233281746" />
     <state width="1878" height="355" key="GridCell.Tab.0.center/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1638130228256" />
-    <state width="792" height="284" key="GridCell.Tab.0.left" timestamp="1638236465491">
+    <state width="1638" height="341" key="GridCell.Tab.0.left" timestamp="1638365418533">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="792" height="284" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1638236465491" />
+    <state width="1638" height="341" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1638365418533" />
     <state width="1638" height="284" key="GridCell.Tab.0.left/0.25.1680.1025@0.25.1680.1025" timestamp="1638233281745" />
     <state width="1878" height="355" key="GridCell.Tab.0.left/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1638130228255" />
-    <state width="792" height="284" key="GridCell.Tab.0.right" timestamp="1638236465492">
+    <state width="1638" height="341" key="GridCell.Tab.0.right" timestamp="1638365418534">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="792" height="284" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1638236465492" />
+    <state width="1638" height="341" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1638365418534" />
     <state width="1638" height="284" key="GridCell.Tab.0.right/0.25.1680.1025@0.25.1680.1025" timestamp="1638233281746" />
     <state width="1878" height="355" key="GridCell.Tab.0.right/0.25.1920.1055/1920.0.1920.1080@1920.0.1920.1080" timestamp="1638130228257" />
-    <state x="160" y="151" width="1520" height="843" key="SettingsEditor" timestamp="1637086201087">
+    <state x="160" y="151" width="1520" height="843" key="SettingsEditor" timestamp="1638365871287">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="160" y="151" width="1520" height="843" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1637086201087" />
+    <state x="160" y="151" width="1520" height="843" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1638365871287" />
     <state x="548" y="295" key="refactoring.ChangeSignatureDialog" timestamp="1638231832803">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

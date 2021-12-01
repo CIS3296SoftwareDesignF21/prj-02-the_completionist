@@ -260,7 +260,7 @@ public class Calendar {
     }
 
     //saves the task to correct month text file
-    private void writeToFile(){
+    public void writeToFile(){
 
         //month
         for(int i =1; i <= 12; i++){

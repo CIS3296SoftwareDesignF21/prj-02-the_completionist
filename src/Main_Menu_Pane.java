@@ -66,12 +66,12 @@ public class Main_Menu_Pane extends Application  {
         String[] stringarr = date.split("/");
         for(int k = 0; k < dayarr.length; k++){
             dayarr[k] = Integer.valueOf(stringarr[k]);
-            System.out.println(dayarr[k]);
+//            System.out.println(dayarr[k]);
         }
         int day = dayarr[1];
         return day;
     }
-    
+
     public static int parseMonth(){
 
         String[] stringArr;
@@ -93,7 +93,7 @@ public class Main_Menu_Pane extends Application  {
         String[] stringarr = date.split("/");
         for(int k = 0; k < dayarr.length; k++){
             dayarr[k] = Integer.valueOf(stringarr[k]);
-            System.out.println(dayarr[k]);
+//            System.out.println(dayarr[k]);
         }
         int year = dayarr[2];
         String year_string = String.valueOf(year);
@@ -102,7 +102,7 @@ public class Main_Menu_Pane extends Application  {
 
         return ret_year;
     }
-    
+
     public static String quote() throws FileNotFoundException {
         String quote = "";
         File quote_file = new File("../prj_02_the_completionist/inspirational_quotes.txt");
