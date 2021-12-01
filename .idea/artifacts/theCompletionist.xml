@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="prj-02-the_completionist:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/mainTest/artifacts/prj_02_the_completionist_jar</output-path>
+  <artifact type="jar" name="theCompletionist">
+    <output-path>$PROJECT_DIR$/</output-path>
     <root id="archive" name="prj-02-the_completionist.jar">
       <element id="module-output" name="prj-02-the_completionist" />
       <element id="library" level="project" name="lib" />
